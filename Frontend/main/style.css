@@ -1,0 +1,238 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Inter:400,700");
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
+}
+
+
+.element {
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    background-color: #000000;
+  }
+  
+  .element .header {
+    position: absolute;
+    width: 1440px;
+    height: 150px;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+  }
+  
+  .element .logo {
+    position: absolute;
+    width: 64px;
+    height: 80px;
+    top: 35px;
+    left: 150px;
+  }
+  
+  .element .text-wrapper {
+    position: absolute;
+    top: 52px;
+    left: 522px;
+    font-family: "Inter", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .element .buy-a-ticket-and {
+    position: absolute;
+    width: 243px;
+    height: 65px;
+    top: 42px;
+    left: 1049px;
+  }
+  
+  .element .div {
+    position: absolute;
+    top: 18px;
+    left: 180px;
+    font-family: "Inter", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .element .button-buy-a-ticket {
+    position: absolute;
+    width: 163px;
+    height: 65px;
+    top: 0;
+    left: 0;
+  }
+  
+  .element .overlap-group {
+    position: relative;
+    width: 161px;
+    height: 65px;
+    background-color: #ca6666;
+    border-radius: 100px;
+  }
+  
+  .element .book-tickets {
+    position: absolute;
+    width: 136px;
+    height: 18px;
+    top: 23px;
+    left: 13px;
+  }
+  
+  .element .rectangle {
+    position: absolute;
+    width: 1219px;
+    height: 1px;
+    top: 135px;
+    left: 110px;
+    background-color: #c4c4c4;
+  }
+  
+  .element .overlap-wrapper {
+    position: absolute;
+    width: 163px;
+    height: 65px;
+    top: 707px;
+    left: 120px;
+  }
+  
+  .element .welcome-to-the {
+    position: absolute;
+    top: 558px;
+    left: 127px;
+    font-family: "Inter", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 36px;
+  }
+  
+  .element .p {
+    position: absolute;
+    top: 954px;
+    left: 152px;
+    font-family: "Inter", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .element .navbar {
+    position: absolute;
+    width: 1440px;
+    height: 75px;
+    top: 150px;
+    left: 0;
+  }
+  
+  .element .text-wrapper-2 {
+    left: 1132px;
+    position: absolute;
+    top: 15px;
+    font-family: "Inter", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .element .text-wrapper-3 {
+    position: absolute;
+    top: 15px;
+    left: 790px;
+    font-family: "Inter", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .element .text-wrapper-4 {
+    left: 461px;
+    position: absolute;
+    top: 15px;
+    font-family: "Inter", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .element .text-wrapper-5 {
+    left: 217px;
+    position: absolute;
+    top: 15px;
+    font-family: "Inter", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .element .vatican-museum {
+    position: absolute;
+    width: 514px;
+    height: 631px;
+    top: 309px;
+    left: 806px;
+  }
+  
+  .element .discover-the-world {
+    position: absolute;
+    top: 364px;
+    left: 120px;
+    font-family: "Inter", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 64px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .element .group {
+    position: absolute;
+    width: 31px;
+    height: 30px;
+    top: 952px;
+    left: 105px;
+    background-color: #19193c;
+    border-radius: 15.52px/15px;
+  }
+  
+  .element .check {
+    position: absolute;
+    width: 13px;
+    height: 9px;
+    top: 11px;
+    left: 9px;
+  }
+  
