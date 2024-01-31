@@ -19,16 +19,17 @@ a {
 }
 
 
+
 .element {
     position: relative;
-    width: 1440px;
+    width: 100%;
     height: 1024px;
     background-color: #000000;
   }
   
   .element .header {
     position: absolute;
-    width: 1440px;
+    width: 100%;
     height: 150px;
     top: 0;
     left: 0;
@@ -144,7 +145,7 @@ a {
   
   .element .navbar {
     position: absolute;
-    width: 1440px;
+    width: 100%;
     height: 75px;
     top: 150px;
     left: 0;
@@ -236,3 +237,32 @@ a {
     left: 9px;
   }
   
+
+
+.clear{
+  clear: both;
+  padding-bottom: 100px;
+  background-color: #000000;
+}
+
+
+
+/* block2 */
+
+
+.block2{
+  width: 100%;
+  height: 1024px;
+  background-color: #000000;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  justify-content: center; */
+}
+
+.text-about h1{
+  font-size: 64px;
+  text-align: center;
+  padding: 50px;
+}
