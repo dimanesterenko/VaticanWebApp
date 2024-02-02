@@ -364,3 +364,11 @@ margin: 30px;
   text-align: center;
   margin-bottom: 30px;
 }
+
+.two-foot{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 15px;
+}
