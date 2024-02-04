@@ -388,7 +388,34 @@ margin: 30px;
 }
 
 .cont-trio{
+  text-align: center;
   display: flex;
   flex-direction: row;
-  
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+
+}
+
+.card-trio{
+  margin: 20px;
+}
+
+.card-trio h2{
+  font-size: 36px;
+  margin: 25px;
+}
+
+.card-trio p{
+  font-size: 20px;
+}
+
+.t1 img,.t3 img{
+  max-width: 100%;
+}
+
+
+.bbb{
+  margin-top: 50px;
 }
