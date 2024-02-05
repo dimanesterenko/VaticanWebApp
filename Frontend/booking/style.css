@@ -99,3 +99,30 @@ header{
     text-align:left;
 
 }
+
+.custom-list li{
+    padding: 15px;
+}
+
+
+.clear{
+    clear: both;
+    padding-bottom: 50px;
+    background-color: #000000;
+}
+
+.foot{
+    text-align: center;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.socm{
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
