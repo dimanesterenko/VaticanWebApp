@@ -100,3 +100,31 @@ body{
     height: 250px;
     padding-top: 70px;
 }
+
+/*block4*/
+
+.info_contacts{
+    padding:0px 70px;
+}
+
+.info_contacts h3{
+    font-size: 32px;
+}
+.info_contacts p{
+    font-size: 24px;
+}
+.foot{
+    text-align: center;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.socm{
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
