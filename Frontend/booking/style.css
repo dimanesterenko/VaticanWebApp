@@ -2,4 +2,100 @@ body{
     background-color: black;
     margin: 0;
     padding: 0%;
+    color: white;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+    align-items: center;
+    flex: 1;
+}
+
+.label_mus{
+    font-size: 40px;
+    text-align: center;
+    padding-left: 130px;
+}
+
+.head_but{
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.ticket {
+    width: 161px;
+    height: 65px;
+    background-color: #CB6666;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ticket p {
+    text-align: center;
+    margin: 0;
+}
+
+.linef{
+    display: block;
+    padding-top: 30px;
+    min-width: 1219px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menunav{
+    margin-top: 30px;
+}
+
+.menunav a{
+    text-decoration: none;
+    color: white;
+    font-size: 32px;
+}
+.menunav>ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 178px;
+}
+
+
+.librarybox{
+    width: 100%;
+    height: 800px;
+    background-image: url(../assets/lib.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.75;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.base_ticket{
+    text-align: center;
+    width: 815px;
+}
+.base_ticket h1{
+    font-size: 64px;
+}
+.base_ticket p{
+    font-size: 40px;
+}
+.custom-list {
+    list-style-image: url('../assets/checkpoint.png'); 
+    font-size: 24px;
+    text-align:left;
+
 }
