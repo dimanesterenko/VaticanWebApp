@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список експонатів</title>
+    <style>
+        .exhibit-card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 300px;
+        }
+        .exhibit-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<h1>Список експонатів</h1>
+    <div class="exhibits">
+        {% for exhibit in exhibits %}
+            <div class="exhibit-card">
+                <h2>{{ exhibit.name }}</h2>
+                <img src="{{ exhibit.photo.url }}" alt="{{ exhibit.name }}" class="exhibit-image">
+                <p><strong>Автор:</strong> {{ exhibit.creator_name }}</p>
+                <p><strong>Опис:</strong> {{ exhibit.description }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

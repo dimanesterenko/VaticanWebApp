@@ -15,8 +15,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
+from exhibits import views
+from rest_framework import routers
+from django.conf import settings
+from django.conf.urls.static import static
+
+router = routers.DefaultRouter()
+router.register(r'exibits', views.ExhibitView, 'exibit')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
+    path('exibitions/', include(router.urls)),
+    path('exhibitsview/', views.exhibit_list_html, name='exhibit_list_html'),
+    #path('exhibit_photos/<str:photo_name>/', views.show_exhibit_photo, name='show_exhibit_photo'),
+
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
