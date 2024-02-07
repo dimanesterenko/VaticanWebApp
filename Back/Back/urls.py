@@ -20,6 +20,7 @@ from exhibits import views
 from rest_framework import routers
 from django.conf import settings
 from django.conf.urls.static import static
+from django.urls import path, include
 
 router = routers.DefaultRouter()
 router.register(r'exibits', views.ExhibitView, 'exibit')
@@ -29,4 +30,5 @@ urlpatterns = [
     path('exibitions/', include(router.urls)),
     path('exhibitsview/', views.exhibit_list_html, name='exhibit_list'),
     path('exhibit_detail/<int:pk>/', views.exhibit_detail, name='exhibit_detail'),
+    path('mainbooking/', include('mainbooking.urls'))
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
