@@ -1,32 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 body{
     background-color: black;
     margin: 0;
-    padding: 0%;
+    padding: 0;
     color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+h1 {
+    font-weight: 500;
 }
 
 header{
     width: 100%;
     display: flex;
     justify-content: space-around;
-    padding-top: 50px;
+    padding-top: 30px;
     align-items: center;
     flex: 1;
 }
 
 .label_mus{
-    font-size: 40px;
+    font-size: 36px;
     text-align: center;
     padding-left: 130px;
 }
 
 .head_but{
-    font-size: 24px;
+    font-size: 20px;
     display: flex;
     flex-direction: row;
     gap: 20px;
     align-items: center;
     justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
 
 .ticket {
@@ -38,6 +50,19 @@ header{
     justify-content: center;
     align-items: center;
 }
+
+.ticket a{
+    color: black;
+}
+
+.ticket a:hover {
+    color: white;
+}
+
+.store a:hover {
+    color: #4A4A4A;
+}
+
 
 .ticket p {
     text-align: center;
@@ -60,41 +85,100 @@ header{
 .menunav a{
     text-decoration: none;
     color: white;
-    font-size: 32px;
+    font-size: 30px;
+    position: relative;
 }
+
+.menunav a:hover{
+    color: #4A4A4A;
+}
+
+.menunav a::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.menunav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
 .menunav>ul{
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 178px;
+    gap: 180px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
 }
 
 
-.librarybox{
+.librarybox {
+    margin-top: 30px;
     width: 100%;
-    height: 800px;
-    background-image: url(../assets/lib.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.75;
+    height: 680px;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+}
+
+.librarybox .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(1280px-Vatican_Museum_September_2015-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+
+.librarybox::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65));
+    z-index: 1;
+}
+
+.librarybox h1 {
+    font-weight: 500;
+}
+
+.base_ticket {
+    z-index: 2; /* Встановлюємо z-index більший за z-index затемнення */
+    color: white; /* Додаємо колір тексту */
 }
 
 .base_ticket{
     text-align: center;
-    width: 815px;
+    width: 770px;
 }
 .base_ticket h1{
     font-size: 64px;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 .base_ticket p{
     font-size: 40px;
 }
-.custom-list {
-    list-style-image: url('../assets/checkpoint.png'); 
+/*.custom-list {
+    list-style-image: url('../assets/checkpoint.png');
     font-size: 24px;
     text-align:left;
 
@@ -102,7 +186,27 @@ header{
 
 .custom-list li{
     padding: 15px;
+}*/
+
+.custom-list {
+    margin-top: 0;
+    font-size: 24px;
+    text-align:left;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
 }
+.custom-list li {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    line-height: 36px;
+}
+
+.custom-list-p {
+    margin-top: -10px;
+}
+
 
 
 .clear{
@@ -111,8 +215,179 @@ header{
     background-color: #000000;
 }
 
+
+
+/* Container */
+.container {
+    margin-top: 70px;
+    width: 100%;
+    height: 165px;
+    background: rgba(40, 45, 53, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+}
+
+
+.line-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.line {
+    width: 106px;
+    height: 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+.container__item__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.container__item__bottom p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.container__item__p {
+    color: rgba(0, 104, 201, 0.5);
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.label__h1 {
+    margin-left: 120px;
+    font-size: 40px;
+}
+
+.label__buttons {
+    display: flex;
+    column-gap: 200px;
+    margin-top: 60px;
+    margin-left: 120px;
+    justify-content: space-around;
+}
+
+.label__buttons__cost {
+    display: flex;
+    column-gap: 30px;
+}
+
+.label__buttons__cost__p {
+    font-size: 20px;
+}
+
+.button {
+    width: 161px;
+    height: 65px;
+    background-color: rgba(40, 45, 53, 0.7);
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-white {
+    background-color: white;
+}
+
+.button__p {
+    font-size: 20px;
+}
+
+.button__p-black {
+    color: black;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 40px;
+}
+
+.details {
+    display: flex;
+    column-gap: 20px;
+}
+
+
+.details__wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.details__container {
+    width: 906px;
+    height: 58px;
+}
+
+
+
+.details__container__rectangle {
+    width: 906px;
+    height: 58px;
+    background: #282D35;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+.details__container2 {
+    width: 443px;
+    height: 58px;
+}
+.details__container__rectangle__container {
+    margin-left: 30px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.name {
+    font-weight: 600;
+    font-size: 20px;
+    color: #A4A3A3;
+}
+input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    color: #A4A3A3;
+    font-size: 20px;
+}
+
+input.name-input {
+    width: 760px;
+}
+.email-input {
+    width: 300px;
+}
+
+.phone-input {
+    width: 300px;
+}
+
+.card-input {
+    width: 760px;
+}
+
+
 .foot{
     text-align: center;
+    margin-top: 60px;
 }
 
 footer{
