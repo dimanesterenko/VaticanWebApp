@@ -27,7 +27,6 @@ router.register(r'exibits', views.ExhibitView, 'exibit')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('exibitions/', include(router.urls)),
-    path('exhibitsview/', views.exhibit_list_html, name='exhibit_list_html'),
-    #path('exhibit_photos/<str:photo_name>/', views.show_exhibit_photo, name='show_exhibit_photo'),
-
+    path('exhibitsview/', views.exhibit_list_html, name='exhibit_list'),
+    path('exhibit_detail/<int:pk>/', views.exhibit_detail, name='exhibit_detail'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

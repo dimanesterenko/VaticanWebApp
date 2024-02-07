@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ exhibit.name }}</title>
+</head>
+<body>
+    <h1>{{ exhibit.name }}</h1>
+    <img src="{{ exhibit.photo.url }}" alt="{{ exhibit.name }}">
+    <p><strong>Автор:</strong> {{ exhibit.creator_name }}</p>
+    <p><strong>Опис:</strong> {{ exhibit.description }}</p>
+</body>
+</html>

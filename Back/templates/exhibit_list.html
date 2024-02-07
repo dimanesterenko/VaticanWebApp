@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <title>Список експонатів</title>
     <style>
+        .exhibits{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+            justify-content: space-around;
+        }
         .exhibit-card {
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -23,8 +30,10 @@
     <div class="exhibits">
         {% for exhibit in exhibits %}
             <div class="exhibit-card">
-                <h2>{{ exhibit.name }}</h2>
-                <img src="{{ exhibit.photo.url }}" alt="{{ exhibit.name }}" class="exhibit-image">
+                <h2>{{ exhibit.title }}</h2>
+                <a href="/exhibit_detail/{{ exhibit.exhibit_code }}">
+                    <img src="{{ exhibit.photo.url }}" alt="{{ exhibit.name }}" class="exhibit-image">
+                </a>
                 <p><strong>Автор:</strong> {{ exhibit.creator_name }}</p>
                 <p><strong>Опис:</strong> {{ exhibit.description }}</p>
             </div>

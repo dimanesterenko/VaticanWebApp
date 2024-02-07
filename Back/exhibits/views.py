@@ -25,6 +25,10 @@ def exhibit_list_html(request):
     exhibits = Exhibit.objects.all()
     return render(request, 'exhibit_list.html', {'exhibits': exhibits})
 
+def exhibit_detail(request, pk):
+    exhibit = get_object_or_404(Exhibit, pk=pk)
+    return render(request, 'exhibit_detail.html', {'exhibit': exhibit})
+
 
 #
 # def show_exhibit_photo(request, photo_name):
