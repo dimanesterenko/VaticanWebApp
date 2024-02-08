@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,7 @@
     <title>Список експонатів</title>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/collections.css' %}">
     <style>
         .exhibits{
             display: flex;
@@ -28,7 +30,33 @@
     </style>
 </head>
 <body>
-<h1>Список експонатів</h1>
+ <div class="block1">
+        <header>
+            <div class="logo">
+                <img src="{% static 'assets/logo 1.png' %}" alt="">
+            </div>
+            <div class="label_mus">
+                The Vatican Museum
+            </div>
+            <div class="head_but">
+                <div class="ticket"><p>Book tickets</p></div>
+                <div class="store">Store</div>
+            </div>
+        </header>
+        <div class="linef">
+            <img src="../static/assets/lineBook.png" alt="">
+        </div>
+        <nav class="menunav">
+            <ul>
+                <li><a href="#">Visit</a></li>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">What's on</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="clear"></div>
+    <div class="block2">
     <div class="exhibits">
         {% for exhibit in exhibits %}
             <div class="exhibit-card">
@@ -41,6 +69,20 @@
             </div>
         {% endfor %}
     </div>
+    </div>
+
+<!-- Footer -->
+    <div class="foot">
+        <h2>See you at the museum!</h2>
+    </div>
+    <footer>
+        <div class="linefot">
+            <img src="../static/assets/line.png" alt="">
+        </div>
+        <div class="socm">
+            <img src="../static/assets/social media.png" alt="">
+        </div>
+    </footer>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
@@ -59,3 +101,4 @@
 </script>
 </body>
 </html>
+
