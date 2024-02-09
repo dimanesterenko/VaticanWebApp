@@ -22,13 +22,19 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path, include
 
+
 router = routers.DefaultRouter()
 router.register(r'exibits', views.ExhibitView, 'exibit')
 
+urlpatterns = [
+    path('', include(router.urls)),
+]
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('exibitions/', include(router.urls)),
     path('exhibitsview/', views.exhibit_list_html, name='exhibit_list'),
     path('exhibit_detail/<int:pk>/', views.exhibit_detail, name='exhibit_detail'),
-    path('mainbooking/', include('mainbooking.urls'))
+    path('mainbooking/', include('mainbooking.urls')),
+    path('souvenirshop/', include('souvenirshop.urls'))
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
