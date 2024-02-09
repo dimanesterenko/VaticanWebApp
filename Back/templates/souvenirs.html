@@ -1,0 +1,175 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/collections.css' %}">
+    <style>
+
+.selectmenu {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-right: 10px;
+    background-color: #282D35;
+    color: white;
+}
+
+.item img{
+    width: 289px;
+    height: 289px;
+}
+.item{
+    width: 332px;
+    height: 479px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(137, 137, 137, 0.13);
+    margin-left: 10px;
+}
+
+.goods{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+.filt{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+.total_good{
+    font-size: 16px;
+}
+.welcome_text{
+    text-align: center;
+    padding: 20px;
+}
+    </style>
+</head>
+<body>
+    <div class="block1">
+        <header>
+            <div class="logo">
+                <img src="{% static 'assets/logo 1.png' %}" alt="">
+            </div>
+            <div class="label_mus">
+                The Vatican Museum
+            </div>
+            <div class="head_but">
+                <div class="ticket"><p>Book tickets</p></div>
+                <div class="store">Store</div>
+            </div>
+        </header>
+        <div class="linef">
+            <img src="{% static 'assets/lineBook.png' %}" alt="">
+        </div>
+        <nav class="menunav">
+            <ul>
+                <li><a href="#">Visit</a></li>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">What's on</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="clear"></div>
+    <div class="block2">
+        <div class="welcome_text">
+        <h2>“Treat yourself to a piece of history with our special souvenirs. <br>
+Keep the memories alive forever in your home.”</h2>
+        </div>
+        <section class="filt">
+            <div class="total_good">
+                <p>Total goods:</p>
+            </div>
+            <div>
+                <select  class="selectmenu" id="options">
+                  <option value="option1">From inexpensive to expensive</option>
+                  <option value="option2">From expensive to inexpensive</option>
+                </select>
+            </div>
+        </section>
+        <div id="souvenir-container" class="goods">
+            {% for souvenir in souvenirs %}
+            <div class="souvenir-card item">
+                {% if souvenir.photo %}
+                    <img src="{{ souvenir.photo.url }}" alt="{{ souvenir.name }}">
+                {% endif %}
+                <h2 class="title_good">{{ souvenir.name }}</h2>
+                <p class="price">Price: €{{ souvenir.price }}</p>
+                {% if souvenir.is_available %}
+                    <p class="stock">In stock</p>
+                {% else %}
+                    <p class="stock">Coming soon</p>
+                {% endif %}
+            </div>
+        {% endfor %}
+</div>
+    </div>
+
+
+
+
+<!-- Footer -->
+    <div class="foot">
+        <h2>See you at the museum!</h2>
+    </div>
+    <footer>
+        <div class="linefot">
+            <img src="{% static 'assets/line.png' %}" alt="">
+        </div>
+        <div class="socm">
+            <img src="{% static 'assets/social media.png' %}" alt="">
+        </div>
+    </footer>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+        var selectMenu = document.getElementById('options');
+        var souvenirContainer = document.getElementById('souvenir-container');
+        var souvenirs = Array.from(souvenirContainer.querySelectorAll('.souvenir-card'));
+
+        selectMenu.addEventListener('change', function() {
+            var selectedValue = selectMenu.value;
+
+            if (selectedValue === 'option1') {
+                souvenirs.sort(function(a, b) {
+                    var priceA = parseFloat(a.querySelector('.price').textContent.replace('Price: €', ''));
+                    var priceB = parseFloat(b.querySelector('.price').textContent.replace('Price: €', ''));
+                    return priceA - priceB;
+                });
+            } else if (selectedValue === 'option2') {
+                souvenirs.sort(function(a, b) {
+                    var priceA = parseFloat(a.querySelector('.price').textContent.replace('Price: €', ''));
+                    var priceB = parseFloat(b.querySelector('.price').textContent.replace('Price: €', ''));
+                    return priceB - priceA;
+                });
+            }
+
+            souvenirContainer.innerHTML = '';
+            souvenirs.forEach(function(souvenir) {
+                souvenirContainer.appendChild(souvenir);
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
