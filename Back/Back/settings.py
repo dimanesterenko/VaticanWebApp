@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'exhibits',
     'corsheaders',
     'rest_framework',
-    'mainbooking'
+    'mainbooking',
+    'souvenirshop'
 ]
 
 MIDDLEWARE = [
