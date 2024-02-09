@@ -121,3 +121,16 @@ select {
     background-color: #282D35;
     color: white;
 }
+
+.item img{
+    width: 289px;
+    height: 289px;
+}
+.item{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 1px;
+    text-align: center;
+}
