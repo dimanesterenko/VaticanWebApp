@@ -16,17 +16,47 @@
             justify-content: space-around;
         }
         .exhibit-card {
-            border: 1px solid #ccc;
             border-radius: 5px;
             padding: 10px;
             margin-bottom: 10px;
-            width: 300px;
+            max-width: 300px;
+            text-align: center;
         }
         .exhibit-image {
             max-width: 100%;
             height: auto;
             margin-bottom: 10px;
         }
+
+/*MEDIA QUERIES*/
+@media only screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+    .label_mus {
+        padding-left: 0;
+    }
+    .head_but {
+        flex-direction: column;
+    }
+    .ticket {
+        width: 100px;
+        height: 35px;
+    }
+    .menunav {
+        margin-top: 10px;
+    }
+    .menunav a {
+        font-size: 14px;
+    }
+    .menunav > ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .linefot, .linef{
+        display: none;
+    }
+}
     </style>
 </head>
 <body>

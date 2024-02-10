@@ -45,7 +45,6 @@ header{
 }
 
 .linef{
-    display: block;
     padding-top: 30px;
     min-width: 1219px;
     display: flex;
@@ -99,4 +98,10 @@ footer{
 .socm{
     padding-top: 30px;
     padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .linef, .linefot {
+        display: none;
+    }
 }

@@ -14,10 +14,22 @@
             justify-content: space-around;
             flex:1;
             gap: 30px;
+            margin: 30px;
+        }
+        .exhibit_box img{
+            max-height: 80vh;
+            width: auto;
         }
 
         .ex_labe{
             font-size: 32px;
+        }
+        @media only screen and (max-width: 600px) {
+        .exhibit_box {
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+        }
         }
 
     </style>
