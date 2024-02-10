@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ exhibit.title }}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/collections.css' %}">
+    <style>
+    .news-article img{
+        height: 50vh;
+    }
+    </style>
+</head>
+<body>
+<div class="block1">
+        <header>
+            <div class="logo">
+                <img src="{% static 'assets/logo 1.png' %}" alt="">
+            </div>
+            <div class="label_mus">
+                The Vatican Museum
+            </div>
+            <div class="head_but">
+                <div class="ticket"><p>Book tickets</p></div>
+                <div class="store">Store</div>
+            </div>
+        </header>
+        <div class="linef">
+            <img src="{% static 'assets/lineBook.png' %}" alt="">
+        </div>
+        <nav class="menunav">
+            <ul>
+                <li><a href="#">Visit</a></li>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">What's on</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="clear"></div>
+
+    <h1>Latest News Articles</h1>
+    {% for new in news %}
+        <div class="news-article">
+            <h2>{{ new.news_title }}</h2>
+            <p><strong>Date:</strong> {{ new.news_date }}</p>
+            <img src="{{ new.news_image.url }}" alt="{{ new.news_title }}">
+            <p>{{ new.news_description|truncatechars:100 }}</p>
+            <hr>
+        </div>
+    {% empty %}
+        <p>No news articles available.</p>
+    {% endfor %}
+<!-- Footer -->
+    <div class="foot">
+        <h2>See you at the museum!</h2>
+    </div>
+    <footer>
+        <div class="linefot">
+            <img src="{% static 'assets/line.png' %}" alt="">
+        </div>
+        <div class="socm">
+            <img src="{% static 'assets/social media.png' %}" alt="">
+        </div>
+    </footer>
+</body>
+</html>

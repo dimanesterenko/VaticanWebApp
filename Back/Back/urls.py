@@ -35,6 +35,7 @@ urlpatterns = [
     path('exhibitsview/', views.exhibit_list_html, name='exhibit_list'),
     path('exhibit_detail/<int:pk>/', views.exhibit_detail, name='exhibit_detail'),
     path('mainbooking/', include('mainbooking.urls')),
-    path('souvenirshop/', include('souvenirshop.urls'))
+    path('souvenirshop/', include('souvenirshop.urls')),
+    path('news/', include('news.urls'))
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
