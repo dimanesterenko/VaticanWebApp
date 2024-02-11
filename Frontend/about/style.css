@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 body{
     background-color: black;
     color: white;
+    font-family: 'Lato', sans-serif;
 }
 
 
@@ -14,12 +17,12 @@ body{
 .block2{
     font-size: 64px;
     width: 100%;
-    max-height: 1024px;
+    min-height: 1024px;
 }
 
 .lavel{
     text-align: center;
-    font-size: 64px;
+    font-size: 5vw;
 }
 
 .cont{
@@ -125,4 +128,119 @@ footer{
 .socm{
     padding-top: 30px;
     padding-bottom: 20px;
+}
+
+
+
+
+/* HEADER CSS*/
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+    align-items: center;
+    flex: 1;
+}
+
+.label_mus{
+    font-size: 40px;
+    text-align: center;
+    padding-left: 130px;
+}
+
+.head_but{
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.linef{
+    display: block;
+    padding-top: 30px;
+    min-width: 1219px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menunav{
+    margin-top: 30px;
+}
+
+.menunav a{
+    text-decoration: none;
+    color: white;
+    font-size: 32px;
+}
+.menunav>ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 178px;
+}
+
+.head_but{
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.ticket {
+    width: 161px;
+    height: 65px;
+    background-color: #CB6666;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ticket p {
+    text-align: center;
+    margin: 0;
+}
+
+
+.pictback{
+    width: 100%;
+    height: 479px;
+    background-image: url("../assets/aboutphoto.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.org_lab{
+    margin-left: 120px;
+}
+
+.org_lab h1{
+    font-size: 64px;
+}
+
+.org_lab p{
+    font-size: 40px;
+}
+
+.list_menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+    font-size: 30px;
+}
+
+.list_menu a{
+    text-decoration: none;
+    color: white;
 }

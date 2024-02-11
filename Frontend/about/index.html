@@ -5,8 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="adaptive.css">
 </head>
 <body>
+
+    <div class="block1">
+        <header>
+            <div class="logo">
+                <img src="../assets/logo 1.png" alt="">
+            </div>
+            <div class="label_mus">
+                The Vatican Museum
+            </div>
+            <div class="head_but">
+                <div class="ticket"><p>Book tickets</p></div>
+                <div class="store">Store</div>
+            </div>
+           
+        </header>
+        <div class="linef">
+            <img src="../assets/lineBook.png" alt="">
+        </div>
+        <div class="burger-menu">
+            <div class="burger-icon"></div>
+        </div>
+        <nav class="menunav">
+            <ul>
+                <li><a href="#">Visit</a></li>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">What's on</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+        <div class="pictback"></div>
+        <section class="oraganize">
+            <div class="org_lab">
+                <h1>About us</h1>
+                <p>History, main purposes and contacts </p>
+            </div>
+            <nav class="list_menu">
+                <div><a href="#">History</a></div>
+                <div><a href="#">Main Purposes</a></div>
+                <div><a href="#">Contacts</a></div>
+            </nav>
+        </section>
+    </div>
+    <div class="clear"></div>
     <!-- BLOCK OF HEADER -->
 
     <div class="block2">
@@ -111,5 +155,16 @@
         </footer>
 
     </div>
+
+    <script>
+        // добавляем обработчик события на клик по иконке бургера
+document.querySelector('.burger-menu').addEventListener('click', function() {
+    // переключаем класс active для иконки бургера
+    this.querySelector('.burger-icon').classList.toggle('active');
+    // переключаем класс active для основного меню
+    document.querySelector('.menunav').classList.toggle('active');
+});
+
+    </script>
 </body>
 </html>

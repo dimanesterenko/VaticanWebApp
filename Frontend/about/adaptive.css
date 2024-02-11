@@ -1,0 +1,93 @@
+
+/*block2*/
+@media only screen and (max-width: 480px) {
+    h2,h3 {
+        font-size: 3vw; /* Размер текста для очень маленьких экранов */
+    }
+}
+@media only screen and (max-width: 768px) {
+    .cont {
+        display: flex;
+        flex-direction: column;
+    }
+    h2,h3 {
+        font-size: 4.5vw; /* Размер текста для меньших экранов */
+    }
+    .cart {
+        width: 100%;
+    }
+}
+
+
+
+
+/*block1*/
+
+.burger-menu {
+    display: none; /* скрываем бургер-меню по умолчанию */
+}
+
+@media only screen and (max-width: 768px) {
+    header{
+        flex-direction: column;
+    }
+    .linef,.linefot{
+        display: none;
+    }
+    .burger-menu {
+        display: block; /* отображаем бургер-меню на мобильных устройствах */
+    }
+    .menunav {
+        display: none; /* скрываем основное меню на мобильных устройствах */
+    }
+}
+
+/* стили для иконки бургера */
+.burger-icon {
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* стили для анимации иконки бургера при активации */
+.burger-icon.active {
+    background-color: #fff;
+}
+
+/* стили для основного меню при активации бургер-меню */
+.menunav.active {
+    display: block;
+}
+
+
+
+/* BLOCK3*/
+@media only screen and (max-width: 768px) {
+    .div1,
+    .div5,
+    .div6,
+    .div7,
+    .div8 {
+        display: none; /* Скрываем ненужные div на мобильных устройствах */
+    }
+
+    .parent {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 10px;
+        
+    }
+
+    .div2,
+    .div3,
+    .div4 {
+        width: 80%; /* Равномерно распределяем ширину для div2, div3 и div4 */
+        box-sizing: border-box; /* Учитываем padding и border внутри общей ширины элемента */
+        padding: 10px; /* Добавляем отступы между элементами */
+        text-align: center;
+        padding-bottom: 20px;
+    }
+}
