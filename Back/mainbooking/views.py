@@ -18,13 +18,16 @@ def create_visitor(request):
 
             ticket = ticket_form.save(commit=False)
             ticket.Visitor_ID_id = visitor_id
+            randomGuide=random.randint(1,4)
+            ticket.Ticket_Guide_id = randomGuide
+
             ticket.save()
             responsible = Responsible.objects.order_by('?').first()
 
             booking = Booking(
                 Visitor_ID_id=visitor_id,
                 Responsible_ID_id=responsible.Responsible_ID if responsible else None,
-                Guide_ID_id=random.randint(1,4),
+                Guide_ID_id = randomGuide if randomGuide is not None else None,
                 Booking_Count=1,
                 Booking_Date=datetime.now().date(),
                 Booking_Time=datetime.now().time(),
@@ -35,14 +38,12 @@ def create_visitor(request):
     else:
         visitor_form = VisitorForm(prefix='visitor')
         ticket_form = TicketForm(prefix='ticket')
-    return render(request, 'visitor_test.html', {'visitor_form': visitor_form, 'ticket_form': ticket_form})
+    #return render(request, 'visitor_test.html', {'visitor_form': visitor_form, 'ticket_form': ticket_form})
+    return render(request, 'booking.html', {'visitor_form': visitor_form, 'ticket_form': ticket_form})
 
 
 def get_next_visitor_id():
-    # Получаем максимальное значение Visitor_ID из базы данных
     max_visitor_id = Visitor.objects.aggregate(Max('Visitor_ID'))['Visitor_ID__max']
-
-    # Если нет записей в базе данных, начинаем с 1, иначе увеличиваем максимальное значение на 1
     if max_visitor_id is None:
         return 1
     else:

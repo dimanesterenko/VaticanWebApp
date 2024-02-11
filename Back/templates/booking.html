@@ -1,0 +1,324 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/collections.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/visitor.css' %}">
+    <style>
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#add-date").click(function() {
+                $("#ticket-date-input").toggle();
+            });
+        });
+
+    $(document).ready(function() {
+            $("#add-time").click(function() {
+                $("#ticket-time-wrapper").toggle();
+            });
+        });
+
+    </script>
+</head>
+<body>
+<div class="block1">
+    <header>
+        <div class="logo">
+            <img src={% static 'assets/logo 1.png' %} alt="">
+        </div>
+        <div class="label_mus">
+            The Vatican Museum
+        </div>
+        <div class="head_but">
+            <div class="ticket"><a href="#">Book tickets</a></div>
+            <div class="store"><a href="#">Store</a></div>
+        </div>
+    </header>
+    <div class="linef">
+        <img src="{% static 'assets/lineBook.png' %}" alt="">
+    </div>
+    <nav class="menunav">
+        <ul>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Exhibits</a></li>
+            <li><a href="#">Visit</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+    <div class="librarybox">
+        <div class="background-image"></div>
+        <div class="base_ticket">
+            <h1>Book tickets</h1>
+            <p>Plan your visit and book your ticket</p>
+            <ul class="custom-list">
+                <li><div><svg width="32" height="30" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="15.5172" cy="15" rx="15.5172" ry="15" fill="#CB6666"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21.8031 11.1937C22.074 11.452 22.074 11.8707 21.803 12.1289L14.0573 19.5113C13.7864 19.7695 13.3471 19.7695 13.0761 19.5113L9.20324 15.8203C8.93227 15.562 8.93225 15.1433 9.2032 14.885C9.47414 14.6268 9.91345 14.6268 10.1844 14.885L13.5667 18.1084L20.8218 11.1937C21.0928 10.9354 21.5321 10.9354 21.8031 11.1937Z" fill="white"/>
+                </svg>
+                </div>
+                    <div class="custom-list-p">Advance purchase of tickets is required to guarantee museum entry.</div>
+                </li>
+                <li><div><svg width="32" height="30" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="15.5172" cy="15" rx="15.5172" ry="15" fill="#CB6666"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21.8031 11.1937C22.074 11.452 22.074 11.8707 21.803 12.1289L14.0573 19.5113C13.7864 19.7695 13.3471 19.7695 13.0761 19.5113L9.20324 15.8203C8.93227 15.562 8.93225 15.1433 9.2032 14.885C9.47414 14.6268 9.91345 14.6268 10.1844 14.885L13.5667 18.1084L20.8218 11.1937C21.0928 10.9354 21.5321 10.9354 21.8031 11.1937Z" fill="white"/>
+                </svg>
+                </div>
+                The Vatican Museum admission tickets include access to the Museums and Sistine Chapel.</li>
+                <li><div><svg width="32" height="30" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="15.5172" cy="15" rx="15.5172" ry="15" fill="#CB6666"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21.8031 11.1937C22.074 11.452 22.074 11.8707 21.803 12.1289L14.0573 19.5113C13.7864 19.7695 13.3471 19.7695 13.0761 19.5113L9.20324 15.8203C8.93227 15.562 8.93225 15.1433 9.2032 14.885C9.47414 14.6268 9.91345 14.6268 10.1844 14.885L13.5667 18.1084L20.8218 11.1937C21.0928 10.9354 21.5321 10.9354 21.8031 11.1937Z" fill="white"/>
+                </svg>
+                </div>
+                    Special tickets that are not sold online can be purchased at the box office, but you must order and contact us.</li>
+                <li><div><svg width="32" height="30" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="15.5172" cy="15" rx="15.5172" ry="15" fill="#CB6666"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21.8031 11.1937C22.074 11.452 22.074 11.8707 21.803 12.1289L14.0573 19.5113C13.7864 19.7695 13.3471 19.7695 13.0761 19.5113L9.20324 15.8203C8.93227 15.562 8.93225 15.1433 9.2032 14.885C9.47414 14.6268 9.91345 14.6268 10.1844 14.885L13.5667 18.1084L20.8218 11.1937C21.0928 10.9354 21.5321 10.9354 21.8031 11.1937Z" fill="white"/>
+                </svg>
+                </div>
+                    <div class="custom-list-p">Tickets cannot be refunded.</div>
+                </li>
+                <!--<li>If you have any questions, contact us.</li>-->
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+<div class="block2">
+    <form action="post">
+        {% csrf_token %}
+
+        <div class="label">
+        <h1 class="label__h1">Choose the most suitable options for you</h1>
+        <div class="container">
+            <div class="container__item">
+                <p class="container__item__p">Type of your visit</p>
+                <div class="container__item__bottom">
+                    <div>
+                        <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_126_780)">
+                                <path d="M22.1667 15.1667V15.6667H22.6667H27.5V28H17.8333V23.1667V22.6667H17.3333H14.6667H14.1667V23.1667V28H4.5V10.3333H9.33333H9.83333V9.83333V5H22.1667V15.1667ZM9.33333 26.3333H9.83333V25.8333V23.1667V22.6667H9.33333H6.66667H6.16667V23.1667V25.8333V26.3333H6.66667H9.33333ZM9.33333 21H9.83333V20.5V17.8333V17.3333H9.33333H6.66667H6.16667V17.8333V20.5V21H6.66667H9.33333ZM9.33333 15.6667H9.83333V15.1667V12.5V12H9.33333H6.66667H6.16667V12.5V15.1667V15.6667H6.66667H9.33333ZM14.6667 21H15.1667V20.5V17.8333V17.3333H14.6667H12H11.5V17.8333V20.5V21H12H14.6667ZM14.6667 15.6667H15.1667V15.1667V12.5V12H14.6667H12H11.5V12.5V15.1667V15.6667H12H14.6667ZM14.6667 10.3333H15.1667V9.83333V7.16667V6.66667H14.6667H12H11.5V7.16667V9.83333V10.3333H12H14.6667ZM20 21H20.5V20.5V17.8333V17.3333H20H17.3333H16.8333V17.8333V20.5V21H17.3333H20ZM20 15.6667H20.5V15.1667V12.5V12H20H17.3333H16.8333V12.5V15.1667V15.6667H17.3333H20ZM20 10.3333H20.5V9.83333V7.16667V6.66667H20H17.3333H16.8333V7.16667V9.83333V10.3333H17.3333H20ZM25.3333 26.3333H25.8333V25.8333V23.1667V22.6667H25.3333H22.6667H22.1667V23.1667V25.8333V26.3333H22.6667H25.3333ZM25.3333 21H25.8333V20.5V17.8333V17.3333H25.3333H22.6667H22.1667V17.8333V20.5V21H22.6667H25.3333Z" fill="#0068C9" stroke="#072F54"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_126_780">
+                                    <rect width="32" height="32" fill="white" transform="translate(0 0.5)"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <p id="guide-question">With or without a guide?</p>
+                    <select id="guide-selection" style="display: none;">
+                      <option value="with_guide">With guide</option>
+                      <option value="without_guide">Without guide</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="line-container">
+                <div class="line"></div>
+            </div>
+
+            <div class="container__item">
+                <p class="container__item__p">Day</p>
+                <div class="container__item__bottom">
+                    <div>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 4H5C3.89543 4 3 4.89543 3 6V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V6C21 4.89543 20.1046 4 19 4Z" stroke="#0068C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 2V6" stroke="#0068C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 2V6" stroke="#0068C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 10H21" stroke="#0068C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+
+                    <p id="add-date">Add a date</p>
+        <div id="ticket-date-input" style="display: none;">
+            {{ ticket_form.Ticket_Date }}
+        </div>
+
+                </div>
+            </div>
+
+            <div class="line-container">
+                <div class="line"></div>
+            </div>
+
+            <div class="container__item">
+                <p class="container__item__p">Time</p>
+                <div class="container__item__bottom">
+                    <div>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 4H5C3.89543 4 3 4.89543 3 6V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V6C21 4.89543 20.1046 4 19 4Z" stroke="#0068C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 2V6" stroke="#0068C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 2V6" stroke="#0068C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 10H21" stroke="#0068C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+
+                    <p id="add-time">Add time</p>
+
+                    <div id="ticket-time-wrapper" style="display: none;">
+                        {{ ticket_form.Ticket_Time }}
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="line-container">
+                <div class="line"></div>
+            </div>
+            <div class="container__item">
+                <p class="container__item__p">Guests</p>
+                <div class="container__item__bottom">
+                    <div>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="#0068C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="#0068C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <p>How many tickets?</p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+    </form>
+
+    <div class="label__buttons">
+        <div class="button"><p class="button__p">Reset</p></div>
+        <div class="label__buttons__cost">
+            <p class="label__buttons__cost__p">Total: €</p>
+            <div></div>
+            <div class="button button-white"><p class="button__p button__p-black">Proceed</p></div>
+        </div>
+
+    </div>
+    <h1 class="label__h1">Provide your details</h1>
+    <form class="form my-form" method="post">
+        {% csrf_token %}
+        <div class="details__wrapper">
+            <div>
+                <div class="details__container">
+                    <div class="details__container__rectangle">
+                        <div class="details__container__rectangle__container">
+                            <svg width="22" height="29" viewBox="0 0 22 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.533 17.8546C14.374 17.7977 13.369 17.3023 13.997 15.2145H13.988C15.625 13.3707 16.876 10.4036 16.876 7.48252C16.876 2.99095 14.145 0.636353 10.971 0.636353C7.795 0.636353 5.079 2.98986 5.079 7.48252C5.079 10.4157 6.323 13.3947 7.97 15.2342C8.612 17.0759 7.464 17.7594 7.224 17.8557C3.9 19.1702 0 21.5664 0 23.9319V24.8188C0 28.0418 5.714 28.7745 11.002 28.7745C16.298 28.7745 21.94 28.0418 21.94 24.8188V23.9319C21.94 21.4953 18.021 19.1177 14.533 17.8546Z" fill="black"/>
+                            </svg>
+                            <div type="text"  class="name-input">
+                                {{ visitor_form.Visitor_Name }}
+                            </div>
+{#                            <input type="text" placeholder="Name" class="name-input" name="visitor_form.Visitor_Name">#}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="details__wrapper">
+            <div class="details">
+                <div class=" details__container2">
+                    <div class="details__container__rectangle details__container2">
+                        <div class="details__container__rectangle__container">
+                            <svg width="31" height="23" viewBox="0 0 31 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M28 0.0101844C27.8775 -0.00339481 27.7541 -0.00339481 27.6317 0.0101844H2.47616C2.31493 0.0128578 2.15478 0.038873 2 0.0875296L14.982 14L28 0.0101844Z" fill="black"/>
+                                <path d="M29.8875 1L16.2375 15.1088C15.8862 15.4713 15.411 15.6747 14.9156 15.6747C14.4203 15.6747 13.9451 15.4713 13.5938 15.1088L0.065625 1.10703C0.024037 1.26567 0.00198627 1.42915 0 1.59354V21.054C0 21.5701 0.197544 22.0651 0.549175 22.43C0.900806 22.795 1.37772 23 1.875 23H28.125C28.6223 23 29.0992 22.795 29.4508 22.43C29.8025 22.0651 30 21.5701 30 21.054V1.59354C29.9925 1.39082 29.9546 1.19055 29.8875 1ZM3.15938 21.054H1.85625V19.6625L8.67188 12.6471L9.99375 14.019L3.15938 21.054ZM28.1062 21.054H26.7938L19.9594 14.019L21.2812 12.6471L28.0969 19.6625L28.1062 21.054Z" fill="black"/>
+                            </svg>
+                            <div type="text"  class="name-input">
+                                {{ visitor_form.Visitor_Mail }}
+                            </div>
+{#                            <input type="email" placeholder="Email" class="email-input" name="visitor_form.Visitor_Mail">#}
+                        </div>
+
+                    </div>
+                </div>
+                <div class=" details__container2">
+                    <div class="details__container__rectangle details__container2">
+                        <div class="details__container__rectangle__container">
+                            <svg width="17" height="28" viewBox="0 0 17 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.3929 0H0.607143C0.271317 0 0 0.56875 0 1.27273V23.8958H17V1.27273C17 0.56875 16.7287 0 16.3929 0ZM0 26.7273C0 27.4313 0.271317 28 0.607143 28H16.3929C16.7287 28 17 27.4313 17 26.7273V23.8958H0V26.7273ZM10.9855 19.4091C10.9855 19.2341 11.0538 19.0909 11.1373 19.0909H14.2679C14.3513 19.0909 14.4196 19.2341 14.4196 19.4091V22.2727C14.4196 22.4477 14.3513 22.5909 14.2679 22.5909H11.1373C11.0538 22.5909 10.9855 22.4477 10.9855 22.2727V19.4091Z" fill="black"/>
+                            </svg>
+                            <div type="text"  class="name-input">
+                                {{ visitor_form.Visitor_Tel }}
+                            </div>
+{#                            <input type="tel" placeholder="Phone number" class="phone-input" name="visitor_form.Visitor_Tel">#}
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="details__wrapper">
+            <div>
+                <div class="details__container">
+                    <div class="details__container__rectangle">
+                        <div class="details__container__rectangle__container">
+                            <svg width="30" height="27" viewBox="0 0 30 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M28.9286 0.550903H1.07143C0.478795 0.550903 0 1.07453 0 1.72266V7.58142H30V1.72266C30 1.07453 29.5212 0.550903 28.9286 0.550903ZM0 25.1577C0 25.8058 0.478795 26.3295 1.07143 26.3295H28.9286C29.5212 26.3295 30 25.8058 30 25.1577V10.8037H0V25.1577ZM19.3862 18.4201C19.3862 18.259 19.5067 18.1272 19.654 18.1272H25.1786C25.3259 18.1272 25.4464 18.259 25.4464 18.4201V21.0566C25.4464 21.2177 25.3259 21.3495 25.1786 21.3495H19.654C19.5067 21.3495 19.3862 21.2177 19.3862 21.0566V18.4201Z" fill="black"/>
+                            </svg>
+                            <div type="text"  class="name-input">
+                                {{ visitor_form.Visitor_Card }}
+                            </div>
+{#                            <input type="text" placeholder="Card Number" class="card-input" name="visitor_form.Visitor_Card">#}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+         {{ ticket_form.as_p }}
+    <div class="button button-white">
+        <button type="submit" class="button__p button__p-black">Submit booking</button>
+    </div>
+
+    </form>
+
+</div>
+
+
+
+
+
+
+{#<form method="post">#}
+{#    {% csrf_token %}#}
+{#    {{ visitor_form.as_p }}#}
+{#    {{ ticket_form.as_p }}#}
+{#    <button type="submit">Submit</button>#}
+{#</form>#}
+
+
+<div class="foot">
+        <h2>See you at the museum!</h2>
+    </div>
+    <footer>
+        <div class="linefot">
+            <img src="{% static 'assets/line.png' %}" alt="">
+        </div>
+        <div class="socm">
+            <img src="{% static 'assets/social media.png' %}" alt="">
+        </div>
+    </footer>
+
+
+<script>
+
+    var guideQuestion = document.getElementById('guide-question');
+    var guideSelection = document.getElementById('guide-selection');
+    guideQuestion.addEventListener('click', function() {
+    guideSelection.style.display = 'block';
+  });
+
+
+
+</script>
+</body>
+</html>
