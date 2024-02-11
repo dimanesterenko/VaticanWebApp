@@ -1,28 +1,49 @@
-
-# Create your views here.
+from datetime import datetime
+from .models import Responsible
+from django.db.models import Max
+import random
 from django.shortcuts import render, redirect
-from .forms import VisitorForm
+from .forms import VisitorForm, TicketForm
+from .models import Visitor
 from .models import Booking
 def create_visitor(request):
     if request.method == 'POST':
-        form = VisitorForm(request.POST)
-        if form.is_valid():
-            visitor = form.save(commit=False)
+        visitor_form = VisitorForm(request.POST, prefix='visitor')
+        ticket_form = TicketForm(request.POST, prefix='ticket')
+        if visitor_form.is_valid() and ticket_form.is_valid():
+            visitor = visitor_form.save(commit=False)
+            visitor_id = get_next_visitor_id()
+            visitor.visitor_id = visitor_id
             visitor.save()
-            booking_data = {
-                'Visitor_ID': visitor.pk,  # Отримуємо ID збереженого візітора
-                'Responsible_ID': request.POST['responsible_id'],  # Отримуємо ID відповідальної особи з POST запиту
-                'Guide_ID': request.POST['guide_id'],  # Отримуємо ID гіда з POST запиту
-                'Booking_Count': int(request.POST['booking_count']),  # Отримуємо кількість з POST запиту
-                'Booking_Date': request.POST['booking_date'],  # Отримуємо дату з POST запиту
-                'Booking_Time': request.POST['booking_time'],  # Отримуємо час з POST запиту
-            }
-            booking = Booking(**booking_data)  # Створюємо об'єкт бронювання
-            booking.save()  # Зберігаємо бронювання в БД
 
-            # Після успішного збереження можна редіректити або робити інші дії
-            return redirect('success_page')
-            # Редірект або інші дії після успішного збереження
+            ticket = ticket_form.save(commit=False)
+            ticket.Visitor_ID_id = visitor_id
+            ticket.save()
+            responsible = Responsible.objects.order_by('?').first()
+
+            booking = Booking(
+                Visitor_ID_id=visitor_id,
+                Responsible_ID_id=responsible.Responsible_ID if responsible else None,
+                Guide_ID_id=random.randint(1,4),
+                Booking_Count=1,
+                Booking_Date=datetime.now().date(),
+                Booking_Time=datetime.now().time(),
+            )
+            booking.save()
+            return redirect('news')
+
     else:
-        form = VisitorForm()
-    return render(request, 'new_visitor.html', {'form': form})
+        visitor_form = VisitorForm(prefix='visitor')
+        ticket_form = TicketForm(prefix='ticket')
+    return render(request, 'visitor_test.html', {'visitor_form': visitor_form, 'ticket_form': ticket_form})
+
+
+def get_next_visitor_id():
+    # Получаем максимальное значение Visitor_ID из базы данных
+    max_visitor_id = Visitor.objects.aggregate(Max('Visitor_ID'))['Visitor_ID__max']
+
+    # Если нет записей в базе данных, начинаем с 1, иначе увеличиваем максимальное значение на 1
+    if max_visitor_id is None:
+        return 1
+    else:
+        return max_visitor_id + 1

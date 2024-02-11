@@ -1,0 +1,107 @@
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0%;
+    color: white;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+    align-items: center;
+    flex: 1;
+}
+
+.label_mus{
+    font-size: 40px;
+    text-align: center;
+    padding-left: 130px;
+}
+
+.head_but{
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.ticket {
+    width: 161px;
+    height: 65px;
+    background-color: #CB6666;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ticket p {
+    text-align: center;
+    margin: 0;
+}
+
+.linef{
+    padding-top: 30px;
+    min-width: 1219px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menunav{
+    margin-top: 30px;
+}
+
+.menunav a{
+    text-decoration: none;
+    color: white;
+    font-size: 32px;
+}
+.menunav>ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 178px;
+}
+
+
+
+
+
+
+
+.clear{
+    clear: both;
+    padding-bottom: 50px;
+    background-color: #000000;
+}
+
+
+/* footer */
+
+.foot{
+    text-align: center;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.socm{
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .linef, .linefot {
+        display: none;
+    }
+}
