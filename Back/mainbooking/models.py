@@ -40,7 +40,7 @@ class Ticket(models.Model):
     Ticket_Time = models.TimeField()
     Ticket_Count = models.IntegerField()
     Ticket_Price = models.DecimalField(max_digits=10, decimal_places=2)
-    Ticket_Status = models.CharField(max_length=15)
+    Ticket_Status = models.CharField(max_length=15, default='booked')
 
     def save(self, *args, **kwargs):
         if not self.pk:
