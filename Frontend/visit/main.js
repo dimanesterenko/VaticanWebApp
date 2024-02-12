@@ -16,3 +16,8 @@ function hamburgerHandler(e) {
 function renderPopup() {
     popup.appendChild(menu);
 }
+
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Плавний перехід на початок сторінки
+}

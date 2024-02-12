@@ -32,7 +32,7 @@
             </header>
             <div class="linef"></div>
             <div class="menu">
-                <div class="hamb">
+                <div class="hamb" onclick="scrollToTop()">
                     <div class="hamb_field" id="hamb">
                         <span class="bar"></span>
                         <span class="bar"></span>
@@ -59,7 +59,7 @@
             <nav class="list_menu">
                 <div><a href="#">Hours & Address</a></div>
                 <div><a href="#">Ticket Prices</a></div>
-                <div><a href="#">Rules and Useful Advice</a></div>
+                <div><a href="#">Rules & Useful Advice</a></div>
             </nav>
         </section>
     </div>
@@ -76,7 +76,7 @@
                         <ellipse cx="15.5172" cy="15" rx="15.5172" ry="15" fill="#1A1A3D"/>
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M21.8031 11.1937C22.074 11.452 22.074 11.8707 21.803 12.1289L14.0573 19.5113C13.7864 19.7695 13.3471 19.7695 13.0761 19.5113L9.20324 15.8203C8.93227 15.562 8.93225 15.1433 9.2032 14.885C9.47414 14.6268 9.91345 14.6268 10.1844 14.885L13.5667 18.1084L20.8218 11.1937C21.0928 10.9354 21.5321 10.9354 21.8031 11.1937Z" fill="white"/>
                     </svg>
-                        The museum is open today from 8:00 AM to 7:00 PM</li>
+                        <p class="tips_text">The museum is open today from 8:00 AM to 7:00 PM</p></li>
                 </ul>
                 <div>
                     <img src="" alt="">
@@ -94,7 +94,7 @@
                         Free entry</h2>
                     <p>Every last Sunday of the month</p>
                 </div>
-                <div class="timeblock">
+                <div class="timeblock timeblock__bottom">
                     <h2>CLOSED</h2>
                     <p>Sunday(except the last Sunday of each month),<br>
                         Jan 1, Jan 6, Mar 19, Apr 1, May 1, Jun 29, <br>
@@ -109,7 +109,7 @@
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M21.8031 11.1937C22.074 11.452 22.074 11.8707 21.803 12.1289L14.0573 19.5113C13.7864 19.7695 13.3471 19.7695 13.0761 19.5113L9.20324 15.8203C8.93227 15.562 8.93225 15.1433 9.2032 14.885C9.47414 14.6268 9.91345 14.6268 10.1844 14.885L13.5667 18.1084L20.8218 11.1937C21.0928 10.9354 21.5321 10.9354 21.8031 11.1937Z" fill="white"/>
                     </svg>
 
-                        Last entry 2 hour before closure</li>
+                        <p class="tips_text">Last entry 2 hour before closure</p></li>
                 </ul>
             </div>
             <div class="second">
@@ -119,7 +119,7 @@
                         <ellipse cx="15.5172" cy="15" rx="15.5172" ry="15" fill="#1A1A3D"/>
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M21.8031 11.1937C22.074 11.452 22.074 11.8707 21.803 12.1289L14.0573 19.5113C13.7864 19.7695 13.3471 19.7695 13.0761 19.5113L9.20324 15.8203C8.93227 15.562 8.93225 15.1433 9.2032 14.885C9.47414 14.6268 9.91345 14.6268 10.1844 14.885L13.5667 18.1084L20.8218 11.1937C21.0928 10.9354 21.5321 10.9354 21.8031 11.1937Z" fill="white"/>
                     </svg>
-                        All visitors must comply with security checks. </li>
+                        <p class="tips_text">All visitors must comply with security checks.</p> </li>
                 </ul>
                 <div>
                     <img src="" alt="">
@@ -137,7 +137,7 @@
                     <p>Taxi rank in the square <br>
                         in front of the Vatican Museums</p>
                 </div>
-                <div class="timeblock">
+                <div class="timeblock timeblock__bottom">
                     <h2>Bus</h2>
                     <p>49, stop in the square in front of the Vatican Museums <br>
                         32, 81, 982, stop at Piazza del Risorgimento <br>
@@ -152,8 +152,8 @@
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M21.8031 11.1937C22.074 11.452 22.074 11.8707 21.803 12.1289L14.0573 19.5113C13.7864 19.7695 13.3471 19.7695 13.0761 19.5113L9.20324 15.8203C8.93227 15.562 8.93225 15.1433 9.2032 14.885C9.47414 14.6268 9.91345 14.6268 10.1844 14.885L13.5667 18.1084L20.8218 11.1937C21.0928 10.9354 21.5321 10.9354 21.8031 11.1937Z" fill="white"/>
                     </svg>
 
-                        The Vatican Museum thanks its visitors <br>
-                        in advance for their understanding and cooperation.</li>
+                        <p class="tips_text">The Vatican Museum thanks its visitors <br>
+                        in advance for their understanding and cooperation.</p></li>
                 </ul>
             </div>
         </section>
@@ -169,53 +169,101 @@
         <div class="entryticket">
             <img src="../assets/entryphoto.svg" alt="">
         </div>
+        <div class="rectangle_white">
+            <p class="rectangle_white_title">Guided tour</p>
+            <table class="price-table">
+                <tr class="price-table-tr">
+                    <th>Type</th>
+                    <th>Price</th>
+                </tr>
+                <tr class="price-table-tr">
+                    <td>Adult</td>
+                    <td>62,00 €</td>
+                </tr>
+                <tr class="price-table-tr">
+                    <td>Child</td>
+                    <td>52,00 €</td>
+                </tr>
+                <tr class="price-table-tr">
+                    <td>Baby</td>
+                    <td>5,00 €</td>
+                </tr>
+                <tr class="price-table-tr">
+                    <td>Others</td>
+                    <td class="price-table-tr-last">Is specified
+                        on the spot or
+                        by the email</td>
+                </tr>
+            </table>
+        </div>
+        <div class="rectangle_white">
+            <p class="rectangle_white_title">Entry ticket</p>
+            <table class="price-table">
+                <tr class="price-table-tr">
+                    <th>Type</th>
+                    <th>Price</th>
+                </tr>
+                <tr class="price-table-tr">
+                    <td>Adult</td>
+                    <td>40,00 €</td>
+                </tr>
+                <tr class="price-table-tr">
+                    <td>Child</td>
+                    <td>30,00 €</td>
+                </tr>
+                <tr class="price-table-tr">
+                    <td>Baby</td>
+                    <td>Free</td>
+                </tr>
+                <tr class="price-table-tr">
+                    <td>Others</td>
+                    <td class="price-table-tr-last">Is specified
+                        on the spot or
+                        by the email</td>
+                </tr>
+            </table>
+        </div>
+        <p class="hidden_text_others">Others are student tickets, school tickets, university institutes, reduced ticket seminaries and religious colleges and free entry for  and family </p>
     </div>
     <div class="block4">
         <div class="lavel">
-            <h2>Rules and Useful Advice</h2>
+            <h2>Rules & Useful Advice</h2>
             <p>The provided guidelines and rules  are essential for ensuring respect and  safety for visitors at the Vatican Museums.  Adhering to these instructions contributes  to a pleasant and secure visit.</p>
         </div>
         <div class="parent">
             <div class="div1">
-            <h3>Preservation of
-                Cultural Heritage</h3>
-            <p class="div1_p">To safeguard and preserve a diverse
-                range of cultural and artistic treasures.</p>    
+            <h3>Clothing</h3>
+            <p class="div1_p">Sleeveless and / or low-cut garments, shorts above the knee, miniskirts and hats are not permitted.</p>
             </div>
             <div class="div2"> 
-                <h3>Cultural Exchange</h3>
-            <p class="div2_p">To facilitate cultural exchange by collaborating with other museums and institutions worldwide.</p>
+                <h3>Security checks by metal detector</h3>
+            <p class="div2_p">To facilitate and speed up security checks by metal detector, visitors are advised to remove inadmissible items from their hand baggage beforehand, and to inform staff in advance</p>
             </div>
             <div class="div3"> 
-                <h3>Promotion of Art
-                    and Culture</h3>
-            <p class="div3_p">To showcase and promote artistic achievements, particularly emphasizing the Renaissance masterpieces, Roman sculptures.</p>
+                <h3>Luggage, bags and rucksacks
+                </h3>
+            <p class="div3_p">Before entering the exhibition spaces, visitors are required to leave in the cloakroom all luggage, suitcases, rucksacks, packages and containers not considered suitable by staff on account of their size or nature.</p>
             </div>
             <div class="div4">
-                <h3>Inspiration</h3>
-            <p>To serve as a source of inspiration, allowing
-                visitors to appreciate the beauty, creativity,
-                and diversity of human expression through
-                art.</p> 
+                <h3>Lost and Found</h3>
+            <p>The visitor is advised to report any loss of personal belongings at the nearest security point, to enable the object to be found.
+                In no event can the Vatican Museums be held responsible for the loss of personal belongings.</p>
             </div>
             <div class="div5">
-                <h3>Information
-                    Dissemination</h3>
-            <p class="div5_p">To provide accurate and up-to-date information about the collections, exhibitions, events, and activities taking place within the Vatican Museums.</p>
+                <h3>Food and drink</h3>
+            <p class="div5_p">It is forbidden to consume food and drink inside the exhibition halls. Along the museum itinerary several vending machines and refreshment areas with cafeteria, self service and pizzeria services are available to the public.</p>
          </div>
             <div class="div6">
-                <h3>Visitor Guidance</h3>
-                <p class="div7_p">To offer practical information for visitors, including details on opening hours, ticketing, guided tours, and other visitor services.</p>
+                <h3>Relaxation areas</h3>
+                <p class="div7_p">Relaxation areas with seats are located along the museum itinerary to enable the visitor to take a break and to rest.</p>
             </div>
             <div class="div7"> 
-                <h3>Digital
-                    Publications</h3>
-            <p>To embrace digital technologies to enhance the virtual museum experience, allowing for new ways to engage with the collections online.</p> 
+                <h3>Families at the Vatican Museums</h3>
+            <p class="div7_p">Along the itinerary there are dedicated spaces equipped with baby changing facilities and a nursing room for breastfeeding mothers. Highchairs are provided in some refreshment areas.</p>
             </div>
             <div class="div8">
-                <h3>Feedback and
-                    Engagement</h3>
-                <p>To get better by staying in touch.</p>     
+                <h3>Protection of the artistic patrimony</h3>
+                <p>It is strictly prohibited to touch the works of art throughout the museums</p>
             </div>
             </div>
     </div>

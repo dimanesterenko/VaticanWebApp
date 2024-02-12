@@ -18,6 +18,7 @@ header{
     font-size: 40px;
     text-align: center;
     padding-left: 130px;
+    font-weight: 600;
 }
 
 .head_but{
@@ -28,8 +29,6 @@ header{
     align-items: center;
     justify-content: center;
 }
-
-
 
 
 .menunav{
@@ -57,6 +56,7 @@ header{
     align-items: center;
     justify-content: center;
 }
+
 
 .ticket {
     width: 161px;
@@ -119,6 +119,10 @@ header{
  }
 
 
+.rectangle_white {
+    display: none;
+}
+
 .parent h3{
     font-size: 32px;
 }
@@ -152,14 +156,26 @@ header{
 
 .div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8{
     height: 250px;
-    padding-top: 70px;
+    padding-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.foot h2 {
+    font-weight: 600;
+    font-size: 24px;
+}
+
 .div4hidden {
     display: initial;
+}
+.foot{
+    text-align: center;
+    margin-top: -40px;
+}
+.hidden_text_others {
+    display: none;
 }
 
 .block4{
@@ -286,6 +302,7 @@ footer{
 .hours_label {
     margin-top: 20px;
     font-weight: 600;
+    font-size: 24px;
 }
 
 h2 {
@@ -313,6 +330,11 @@ ul {
     width: 300px;
 }
 
+.parent h3 {
+    margin-top: -10px;
+    max-width: 350px;
+}
+
 
 @media (max-width: 1366px) {
     .org_lab {
@@ -335,8 +357,8 @@ ul {
     .div4, .div8 {
         display: none;
     }
-    .div1, .div2,.div3,.div5,.div6,.div7{
-
+    .div1_p, .div2_p,.div3_p,.div5_p,.div6_p,.div7_p{
+        text-align: justify;
     }
     .parent {
         grid-template-columns: repeat(3, 1fr);
@@ -353,13 +375,183 @@ ul {
     .lavel p {
         width: 730px;
     }
+    .parent h3 {
+        margin-top: 5px;
+    }
+    .div3_p {
+        min-width: 290px;
+    }
 }
 
+@media (max-width: 905px) {
+    .parent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 50px;
+    }
+    .div1,
+    .div2,
+    .div3,
+    .div4,
+    .div5 {
+        display: none;
+    }
+
+    .div6,
+    .div7,
+    .div8 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 330px;
+    }
+    .parent p {
+        text-align: justify;
+    }
+    .foot {
+        margin-top: 90px;
+    }
+    .foot h2 {
+        font-weight: 600;
+        font-size: 18px;
+    }
+}
 
 @media (max-width: 789px) {
-
+    .org_lab {
+        background-image: url("../assets/background of the museum.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 75px;
+        margin-top: 30px;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .pictback {
+        display: none;
+    }
+    .org_lab h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+    .org_lab p {
+        font-size: 14px;
+        text-align: center;
+    }
+    .list_menu {
+        font-size: 16px;
+    }
+    .list_menu {
+        margin-left: 25px;
+        gap: 70px;
+        margin-top: 80px;
+    }
+    .clear {
+        padding-bottom: 50px;
+    }
+    .hoursblock {
+        margin-top: 35px;
+    }
+    .laf {
+        font-size: 24px;
+    }
+    .hours_label {
+        font-size: 16px;
+    }
+    .tips_text {
+        font-size: 12px;
+    }
+    .first h2 {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .second h2 {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .timeblock {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    .timeblock__bottom {
+        margin-bottom: 20px;
+    }
+    .first, .second {
+        width: 339px;
+    }
+    .guidedticket, .entryticket {
+        display: none;
+    }
+    .rectangle_white {
+        width: 339px;
+        height: 391px;
+        background: #FFFFFF;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .rectangle_white_title {
+        font-size: 24px;
+        margin-left: 20px;
+    }
+    .price-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    .price-table th, .price-table td {
+        padding: 8px;
+        text-align: center;
+        padding-left: 0;
+    }
+    .rectangle_white_title, .price-table tr {
+        color: black;
+    }
+    .rectangle_white_title {
+        font-weight: 600;
+    }
+    .price-table td {
+        text-align: left;
+    }
+    .price-table-tr {
+        display: flex;
+        column-gap: 50px;
+        align-items: center;
+    }
+    tr td {
+        padding: 0;
+    }
+    .price-table-tr-last {
+        margin-left: -15px;
+    }
+    .block3 {
+        gap: 30px
+    }
+    .hidden_text_others {
+        display: initial;
+        width: 260px;
+        font-size: 16px;
+        text-align: justify;
+    }
+    .lavel h2 {
+        font-size: 24px;
+    }
+    .lavel p {
+        font-size: 16px;
+        width: 290px;
+        text-align: justify;
+    }
 
 }
+
 
 
 
@@ -429,9 +621,6 @@ body{
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 500;
-}
 
 p {
     margin: 0;
@@ -477,6 +666,9 @@ header{
     gap: 20px;
     align-items: center;
     justify-content: center;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
 }
 
 a {
@@ -862,10 +1054,7 @@ width: 401px;
     font-size: 20px;
 }
 
-.foot{
-    text-align: center;
-    margin-top: -40px;
-}
+
 
 footer{
     display: flex;
