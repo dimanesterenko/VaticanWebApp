@@ -95,17 +95,89 @@ header{
     font-size: 40px;
 }
 
-.list_menu{
+.list_menu {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 150px;
     font-size: 24px;
+    position: relative;
+    z-index: 1000;
+    transition: top 0.3s ease;
 }
 
-.list_menu a{
+.list_menu.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px black;
+    transition: top 0.3s ease;
+    background-color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /*padding-left: 20px;*/
+    margin-top: 0;
+    /*margin-left: 0;*/
+}
+
+@media (max-width: 880px) {
+    .list_menu.fixed {
+        padding-left: 40px;
+    }
+    .list_menu {
+        padding-left: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .list_menu.fixed {
+        padding-left: 0;
+    }
+    .list_menu {
+        padding-left: 0;
+    }
+
+}
+
+@media (max-width: 520px) {
+    .list_menu.fixed {
+        padding-left: 20px;
+    }
+    .list_menu {
+        padding-left: 20px;
+    }
+}
+
+.list_menu a {
     text-decoration: none;
     color: white;
+}
+
+.list_menu {
+    margin-top: 70px;
+    /*margin-left: 100px;*/
+}
+
+.list_menu a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.list_menu a:hover {
+    color: #4A4A4A;
+}
+
+
+
+@keyframes header {
+    0% {
+        opacity: 0;
+        top: -100px;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
+    }
 }
 
 .parent {
@@ -284,19 +356,6 @@ footer{
     margin-top: 15px;
 }
 
-.list_menu {
-    margin-top: 25px;
-    margin-left: 100px;
-}
-
-.list_menu a {
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.list_menu a:hover {
-    color: #4A4A4A;
-}
 
 
 .hours_label {
@@ -341,7 +400,7 @@ ul {
         margin-left: 50px;
     }
     .list_menu {
-        margin-left: 50px;
+        /*margin-left: 50px;*/
     }
     .hoursblock {
         margin-top: 50px;
@@ -418,6 +477,11 @@ ul {
     }
 }
 
+@media (max-width: 890px) {
+    /*.list_menu {margin-left: 50px;}*/
+}
+
+
 @media (max-width: 789px) {
     .org_lab {
         background-image: url("../assets/background of the museum.png");
@@ -447,7 +511,7 @@ ul {
         font-size: 16px;
     }
     .list_menu {
-        margin-left: 25px;
+        /*margin-left: 25px;*/
         gap: 70px;
         margin-top: 80px;
     }
