@@ -1127,11 +1127,32 @@ footer{
     flex-direction: column;
     gap: 20px;
 }
+
+.linksContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .socm{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
     padding-top: 30px;
     padding-bottom: 20px;
 }
 
+.iconContainer {
+    display: inline-block;
+    position: relative;
+}
+
+.iconContainer a:hover svg {
+    transform: scale(1.2);
+    transition: transform 0.5s ease;
+}
 .contact_h1 {
     font-size: 48px;
 }
@@ -1337,7 +1358,7 @@ footer{
         left: -100%;
         display: flex;
         padding-top: 50px;
-        z-index: 100;
+        z-index: 2000;
         /*backdrop-filter: blur(8px);*/
         background-color: black;
         transition: 0.3s;
