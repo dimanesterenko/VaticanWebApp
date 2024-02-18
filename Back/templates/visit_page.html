@@ -1,0 +1,357 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Vatican Museum</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/visit_page.css' %}">
+</head>
+<body>
+    <div class="block1">
+        <div class="header">
+            <header>
+                <a href="{% url 'main_page' %}" class="logo-link">
+                    <div class="logo">
+                        <svg width="64" height="80" viewBox="0 0 64 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_10_10)">
+                                <path d="M27.1291 51.3043L25.2794 52.9192L25.4027 53.0434C26.3892 53.913 27.1291 55.4037 27.1291 56.7701C27.1291 58.6335 26.0193 60.3726 24.2929 61.4906L24.0463 61.6148L25.0328 63.354L25.2794 63.2298L25.4027 63.4782C27.869 62.236 29.4721 59.6273 29.4721 56.7701C29.4721 54.7826 28.6089 52.9192 27.1291 51.5527V51.3043ZM26.0193 30.3105L26.2659 31.3043H30.3353C30.212 32.9192 29.5954 35.5279 27.7457 37.5155L29.3488 38.882C30.9518 37.3913 32.0617 34.7826 32.4316 32.6708C32.8016 34.7826 33.9114 37.3913 35.5145 38.882L37.1175 37.5155C35.2678 35.5279 34.6513 32.9192 34.528 31.3043H38.9673L39.2139 30.1863C39.2139 30.1863 40.447 24.472 42.2967 17.0186C42.79 15.031 41.0636 12.4224 38.2274 10.3106C36.9942 9.31676 35.5145 8.4472 33.9114 7.57763V4.47205H35.7611C36.2544 3.85093 36.2544 2.73292 35.7611 2.1118H33.9114V0.372671C33.1715 -0.124223 32.185 4.17233e-07 31.4451 0.372671V2.36025H29.7187C29.3488 2.98136 29.3488 4.09938 29.7187 4.72049H31.4451V7.82608C29.3488 8.81987 27.499 10.0621 26.2659 11.1801C24.1696 13.0435 22.8131 15.2795 23.1831 17.1428C24.6628 24.8447 26.0193 30.3105 26.0193 30.3105ZM32.4316 10.1863C37.1175 12.0497 39.8305 15.6522 39.5838 16.5217C38.1041 22.3602 37.1175 26.9565 36.6243 29.0683H28.1156C27.6224 27.0807 26.5125 22.3602 25.2794 16.5217C25.0328 15.5279 27.7457 12.0497 32.4316 10.1863ZM22.4432 42.4844C23.6763 42.6087 25.1561 42.4844 26.0193 41.7391L24.4162 40.3726C24.0463 40.7453 23.1831 40.7453 22.5665 40.6211C21.58 40.3726 20.5935 39.2546 20.5935 38.2608L18.4971 37.8882C18.3738 38.1366 15.291 44.9689 21.7033 49.5652L23.3064 48.1987C19.9769 45.59 19.6069 42.8571 19.8536 40.8695C20.4701 41.7391 21.3333 42.236 22.4432 42.4844ZM62.2736 63.2298C61.6571 62.6086 61.0405 62.236 60.3006 61.9875C61.0405 60.9937 61.4104 59.6273 61.4104 58.385C61.4104 56.8944 60.7939 55.2795 59.684 54.1614C58.5742 53.0434 56.9711 52.4223 55.4914 52.4223C54.0116 52.4223 52.4085 53.0434 51.2987 54.1614C50.4355 55.031 49.9422 56.0248 49.6956 57.0186L34.4046 44.3478L46.3661 34.5341L51.5453 40.4969L50.0655 41.7391L51.052 42.8571L55.8613 38.882L52.7784 34.6584L51.422 35.7764L50.5588 36.2733L49.449 35.031L50.0655 34.5341L51.422 33.4161L49.8189 31.3043L51.1754 30.1863L52.7784 32.2981L54.0116 31.3043L54.7515 30.6832L55.738 31.9254L55.1214 32.4223L53.8883 33.4161L57.0944 37.5155L62.3969 33.1677L61.4104 32.0497L60.054 33.1677L55.1214 26.8323L58.2043 24.3478C58.081 23.4782 57.3411 22.6087 56.6012 22.3602L32.3083 42.6087L8.50867 23.1056C7.76879 23.354 7.0289 24.2236 6.90559 25.0931L9.98844 27.5776L5.05588 33.913L3.82274 32.795L2.83622 33.913L8.13873 38.2608L11.3449 34.1615L9.37187 32.6708L10.3584 31.4285L12.3314 32.9192L13.9345 30.8074L15.2909 31.9254L13.6879 34.0372L15.6609 35.6521L14.5511 36.8944L12.578 35.2795L9.49519 39.5031L14.3044 43.4782L15.2909 42.236L13.8112 40.9938L18.9904 35.031L30.212 44.2236L14.4278 57.1428C14.1811 55.9006 13.6879 54.7826 12.8247 53.913C11.7148 52.6708 10.1118 52.1739 8.63199 52.1739C7.15222 52.1739 5.54914 52.795 4.43931 53.913C3.08285 55.031 2.46628 56.6459 2.46628 58.1366C2.46628 59.3788 2.83622 60.6211 3.57611 61.7391C2.83622 61.9875 2.21965 62.4844 1.60308 62.9813C0.616571 64.2235 0 65.7142 0 67.3291C0 68.8198 0.616571 70.4347 1.7264 71.5527C2.83622 72.795 4.43931 73.2919 5.91908 73.2919C7.39885 73.2919 8.7553 72.795 9.86513 71.9254V79.9999C9.86513 79.9999 11.8382 79.9999 12.578 76.7701V70.062C13.3179 70.4347 14.1811 70.5589 15.0443 70.5589C16.5241 70.5589 18.1272 69.9378 19.237 68.8198C20.3468 67.7018 20.9634 66.0869 20.9634 64.5962C20.9634 63.1055 20.3468 61.4906 19.237 60.3726C18.4971 59.6273 17.5106 59.1304 16.5241 58.8819L21.4567 55.031L24.9095 52.1739L31.0752 47.0807V47.3291C31.0752 47.3291 32.4316 47.9503 33.5414 47.3291V47.0807L40.3237 52.6708L47.8459 59.0062C46.736 59.2546 45.6262 59.7515 44.763 60.6211C43.6532 61.7391 43.0366 63.354 43.0366 64.8447C43.0366 66.3354 43.6532 67.9502 44.763 69.0683C45.8729 70.3105 47.4759 70.8074 48.9557 70.8074C49.6956 70.8074 50.5588 70.6832 51.2987 70.3105V76.7701C52.0386 79.8757 53.8883 79.9999 53.8883 79.9999V71.9254C54.9981 72.9192 56.4779 73.5403 57.8343 73.5403C59.3141 73.5403 60.9172 72.9192 62.027 71.8012C63.2601 70.6832 63.7534 69.0683 63.7534 67.5776C64 65.9627 63.3835 64.3478 62.2736 63.2298ZM17.6339 61.9875C18.3738 62.7329 18.7437 63.7267 18.7437 64.7204C18.7437 65.7142 18.3738 66.708 17.6339 67.4534C16.894 68.1987 15.9075 68.5714 15.0443 68.5714C14.0578 68.5714 13.0713 68.1987 12.3314 67.4534C12.0848 67.2049 11.9615 67.0807 11.8382 66.8322C11.5915 66.4596 11.0983 66.2111 10.605 66.3354C10.1118 66.4596 9.86513 66.9565 9.74182 67.4534C9.74182 68.4471 9.37187 69.4409 8.63199 70.062C7.8921 70.8074 6.90559 71.1801 5.91908 71.1801C4.93256 71.1801 3.94605 70.8074 3.32948 70.062C2.5896 69.3167 2.21965 68.3229 2.21965 67.3291C2.21965 66.3354 2.5896 65.3416 3.32948 64.5962C4.06937 63.8509 5.05588 63.4782 5.91908 63.4782C6.41233 63.4782 6.90559 63.1055 7.0289 62.6086C7.15222 62.1117 6.90559 61.6149 6.53565 61.3664C6.28902 61.2422 6.04239 60.9937 5.79576 60.7453C5.05588 60 4.68594 59.0062 4.68594 58.0124C4.68594 57.0186 5.05588 56.0248 5.79576 55.2795C6.53565 54.5341 7.52216 54.1614 8.50867 54.1614C9.49519 54.1614 10.4817 54.5341 11.2216 55.2795C11.9615 56.0248 12.3314 57.0186 12.3314 57.8881C12.3314 58.385 12.2081 59.0062 11.9615 59.5031C11.7148 59.8757 11.8382 60.4968 12.2081 60.7453C12.578 61.118 13.0713 61.118 13.4412 60.9937C13.9345 60.7453 14.4278 60.6211 15.0443 60.6211C15.9075 60.8695 16.894 61.2422 17.6339 61.9875ZM60.6705 70.1863C59.9307 70.9316 58.9441 71.3043 58.0809 71.3043C57.0944 71.3043 56.1079 70.9316 55.368 70.1863C54.6282 69.4409 54.2582 68.4471 54.2582 67.5776C54.2582 67.0807 53.8883 66.5838 53.395 66.4596H53.0251C52.6551 66.4596 52.2852 66.708 52.0386 66.9565C51.9152 67.2049 51.7919 67.4534 51.5453 67.5776C50.8054 68.3229 49.8189 68.6956 48.8324 68.6956C47.8459 68.6956 46.8594 68.3229 46.2428 67.5776C45.5029 66.8322 45.133 65.8385 45.133 64.8447C45.133 63.8509 45.5029 62.8571 46.2428 62.1117C46.9827 61.3664 47.9692 60.9937 48.8324 60.9937C49.3256 60.9937 49.9422 61.118 50.4355 61.3664C50.8054 61.6149 51.422 61.4906 51.6686 61.118C52.0386 60.7453 52.0386 60.2484 51.9152 59.8757C51.6686 59.3788 51.5453 58.8819 51.5453 58.2608C51.5453 57.267 51.9152 56.3975 52.6551 55.6521C53.395 54.9068 54.3815 54.5341 55.368 54.5341C56.3546 54.5341 57.3411 54.9068 58.0809 55.6521C58.8208 56.3975 59.1908 57.3913 59.1908 58.385C59.1908 59.3788 58.8208 60.3726 58.0809 61.118C57.8343 61.3664 57.5877 61.4906 57.3411 61.7391C56.8478 61.9875 56.7245 62.4844 56.8478 62.9813C56.9711 63.4782 57.4644 63.8509 57.9576 63.8509C58.9441 63.8509 59.9307 64.2235 60.5472 64.9689C61.2871 65.7142 61.6571 66.708 61.6571 67.7018C61.7804 68.4471 61.4104 69.4409 60.6705 70.1863ZM41.1869 48.1987L42.79 49.5652C49.3256 44.9689 46.1195 38.1366 45.9962 37.8882L43.8998 38.3851C43.8998 39.3788 42.9133 40.4969 41.9268 40.7453C41.3102 40.8695 40.447 40.8695 40.0771 40.4969L38.474 41.8633C39.2139 42.6087 40.817 42.7329 42.0501 42.6087C43.2833 42.3602 44.1465 41.7391 44.6397 40.9938C44.8863 42.8571 44.3931 45.7142 41.1869 48.1987ZM37.3642 56.7701C37.3642 55.5279 38.1041 54.0372 39.0906 53.0434L39.3372 52.9192L37.4875 51.3043L37.3642 51.4285C35.8844 52.795 35.0212 54.6583 35.0212 56.6459C35.0212 59.5031 36.6243 62.1117 39.0906 63.354L39.2139 63.1055L39.4605 63.2298L40.447 61.4906L40.2004 61.3664C38.474 60.2484 37.3642 58.6335 37.3642 56.7701Z" fill="#7E8083"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_10_10">
+                                    <rect width="64" height="80" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                </a>
+                <div class="label_mus">The Vatican Museum</div>
+                <div class="head_but">
+                    <div class="ticket"><a href="/mainbooking/create/">Book tickets</a></div>
+                    <div class="store"><a href="/souvenirshop/shop/">Store</a></div>
+                </div>
+            </header>
+            <div class="linef"></div>
+            <div class="menu">
+                <div class="hamb" onclick="scrollToTop()">
+                    <div class="hamb_field" id="hamb">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+                <nav class="menunav" id="menu">
+                    <ul>
+                        <li><a href="/news/newslist/">News</a></li>
+                        <li><a href="/exhibitsview/">Exhibits</a></li>
+                        <li><a href="/visit/">Visit</a></li>
+                        <li><a href="/about/">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="popup" id="popup"></div>
+        </div>
+        <div class="pictback"></div>
+        <section class="oraganize">
+            <div class="org_lab">
+                <h1>Organize your visit</h1>
+                <p>Hours and address, ticket prices, rules and useful advice </p>
+            </div>
+            <nav class="list_menu" id="list_menu">
+                <div><a href="#hours">Hours & Address</a></div>
+                <div><a href="#ticket_price">Ticket Prices</a></div>
+                <div><a href="#rules">Rules & Useful Advice</a></div>
+            </nav>
+        </section>
+    </div>
+    <div class="clear clear1"></div>
+    <div class="block2">
+        <div class="laf" id="hours">
+            Hours & Address
+        </div>
+        <section class="hoursblock">
+            <div class="first">
+                <p class="hours_label">HOURS</p>
+                <ul>
+                    <li class="tips"><svg width="32" height="30" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="15.5172" cy="15" rx="15.5172" ry="15" fill="#1A1A3D"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M21.8031 11.1937C22.074 11.452 22.074 11.8707 21.803 12.1289L14.0573 19.5113C13.7864 19.7695 13.3471 19.7695 13.0761 19.5113L9.20324 15.8203C8.93227 15.562 8.93225 15.1433 9.2032 14.885C9.47414 14.6268 9.91345 14.6268 10.1844 14.885L13.5667 18.1084L20.8218 11.1937C21.0928 10.9354 21.5321 10.9354 21.8031 11.1937Z" fill="white"/>
+                    </svg>
+                        <p class="tips_text">The museum is open today from 8:00 AM to 7:00 PM</p></li>
+                </ul>
+                <div>
+                    <img src="" alt="">
+                </div>
+                <div class="timeblock">
+                    <h2>8:00 AM - 7:00 PM</h2>
+                    <p>From Monday to Saturday</p>
+                </div>
+                <div class="timeblock">
+                    <h2>8:00 AM - 8:00 PM</h2>
+                    <p>From 1 March on Fridays and Saturdays</p>
+                </div>
+                <div class="timeblock">
+                    <h2>9:00 AM - 2:00 PM <br>
+                        Free entry</h2>
+                    <p>Every last Sunday of the month</p>
+                </div>
+                <div class="timeblock timeblock__bottom">
+                    <h2>CLOSED</h2>
+                    <p>Sunday(except the last Sunday of each month),<br>
+                        Jan 1, Jan 6, Mar 19, Apr 1, May 1, Jun 29, <br>
+                        Aug 14, Aug 15, Nov 1, Dec 25, Dec 26</p>
+                </div>
+                <div>
+                    <img src="" alt="">
+                </div>
+                <ul>
+                    <li class="tips"><svg width="32" height="30" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="15.5172" cy="15" rx="15.5172" ry="15" fill="#1A1A3D"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M21.8031 11.1937C22.074 11.452 22.074 11.8707 21.803 12.1289L14.0573 19.5113C13.7864 19.7695 13.3471 19.7695 13.0761 19.5113L9.20324 15.8203C8.93227 15.562 8.93225 15.1433 9.2032 14.885C9.47414 14.6268 9.91345 14.6268 10.1844 14.885L13.5667 18.1084L20.8218 11.1937C21.0928 10.9354 21.5321 10.9354 21.8031 11.1937Z" fill="white"/>
+                    </svg>
+
+                        <p class="tips_text">Last entry 2 hour before closure</p></li>
+                </ul>
+            </div>
+            <div class="second">
+                <p class="hours_label">ADDRESS</p>
+                <ul>
+                    <li class="tips"><svg width="32" height="30" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="15.5172" cy="15" rx="15.5172" ry="15" fill="#1A1A3D"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M21.8031 11.1937C22.074 11.452 22.074 11.8707 21.803 12.1289L14.0573 19.5113C13.7864 19.7695 13.3471 19.7695 13.0761 19.5113L9.20324 15.8203C8.93227 15.562 8.93225 15.1433 9.2032 14.885C9.47414 14.6268 9.91345 14.6268 10.1844 14.885L13.5667 18.1084L20.8218 11.1937C21.0928 10.9354 21.5321 10.9354 21.8031 11.1937Z" fill="white"/>
+                    </svg>
+                        <p class="tips_text">All visitors must comply with security checks.</p> </li>
+                </ul>
+                <div>
+                    <img src="" alt="">
+                </div>
+                <div class="timeblock">
+                    <h2>Metro</h2>
+                    <p>Line A direction Battistini, Ottaviano or Cipro stations</p>
+                </div>
+                <div class="timeblock">
+                    <h2>Tram</h2>
+                    <p>19, stop at Piazza del Risorgimento</p>
+                </div>
+                <div class="timeblock">
+                    <h2>Taxi</h2>
+                    <p>Taxi rank in the square <br>
+                        in front of the Vatican Museums</p>
+                </div>
+                <div class="timeblock timeblock__bottom">
+                    <h2>Bus</h2>
+                    <p>49, stop in the square in front of the Vatican Museums <br>
+                        32, 81, 982, stop at Piazza del Risorgimento <br>
+                        492, 990, stop in Via Leone IV / Via degli Scipioni
+                </div>
+                <div>
+                    <img src="" alt="">
+                </div>
+                <ul>
+                    <li class="tips"><svg width="32" height="30" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="15.5172" cy="15" rx="15.5172" ry="15" fill="#1A1A3D"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M21.8031 11.1937C22.074 11.452 22.074 11.8707 21.803 12.1289L14.0573 19.5113C13.7864 19.7695 13.3471 19.7695 13.0761 19.5113L9.20324 15.8203C8.93227 15.562 8.93225 15.1433 9.2032 14.885C9.47414 14.6268 9.91345 14.6268 10.1844 14.885L13.5667 18.1084L20.8218 11.1937C21.0928 10.9354 21.5321 10.9354 21.8031 11.1937Z" fill="white"/>
+                    </svg>
+
+                        <p class="tips_text">The Vatican Museum thanks its visitors <br>
+                        in advance for their understanding and cooperation.</p></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <div class="clear"></div>
+    <div class="block3">
+        <div class="label_mus" id="ticket_price">
+            Ticket Prices
+        </div>
+        <div class="guidedticket">
+            <img src="{% static 'assets/guidedphoto.svg' %}" alt="">
+        </div>
+        <div class="entryticket">
+            <img src="{% static 'assets/entryphoto.svg' %}" alt="">
+        </div>
+        <div class="rectangle_white">
+            <p class="rectangle_white_title">Guided tour</p>
+            <table class="price-table">
+                <tr class="price-table-tr">
+                    <th>Type</th>
+                    <th>Price</th>
+                </tr>
+                <tr class="price-table-tr">
+                    <td>Adult</td>
+                    <td>62,00 €</td>
+                </tr>
+                <tr class="price-table-tr">
+                    <td>Child</td>
+                    <td>52,00 €</td>
+                </tr>
+                <tr class="price-table-tr">
+                    <td>Baby</td>
+                    <td>5,00 €</td>
+                </tr>
+                <tr class="price-table-tr">
+                    <td>Others</td>
+                    <td class="price-table-tr-last">Is specified
+                        on the spot or
+                        by the email</td>
+                </tr>
+            </table>
+        </div>
+        <div class="rectangle_white">
+            <p class="rectangle_white_title">Entry ticket</p>
+            <table class="price-table">
+                <tr class="price-table-tr">
+                    <th>Type</th>
+                    <th>Price</th>
+                </tr>
+                <tr class="price-table-tr">
+                    <td>Adult</td>
+                    <td>40,00 €</td>
+                </tr>
+                <tr class="price-table-tr">
+                    <td>Child</td>
+                    <td>30,00 €</td>
+                </tr>
+                <tr class="price-table-tr">
+                    <td>Baby</td>
+                    <td>Free</td>
+                </tr>
+                <tr class="price-table-tr">
+                    <td>Others</td>
+                    <td class="price-table-tr-last">Is specified
+                        on the spot or
+                        by the email</td>
+                </tr>
+            </table>
+        </div>
+        <p class="hidden_text_others">Others are student tickets, school tickets, university institutes, reduced ticket seminaries and religious colleges and free entry for  and family </p>
+    </div>
+    <div class="block4">
+        <div class="lavel" >
+            <h2 id="rules">Rules & Useful Advice</h2>
+            <p>The provided guidelines and rules  are essential for ensuring respect and  safety for visitors at the Vatican Museums.  Adhering to these instructions contributes  to a pleasant and secure visit.</p>
+        </div>
+        <div class="parent">
+            <div class="div1">
+            <h3>Clothing</h3>
+            <p class="div1_p">Sleeveless and / or low-cut garments, shorts above the knee, miniskirts and hats are not permitted.</p>
+            </div>
+            <div class="div2">
+                <h3>Security checks by metal detector</h3>
+            <p class="div2_p">To facilitate and speed up security checks by metal detector, visitors are advised to remove inadmissible items from their hand baggage beforehand, and to inform staff in advance</p>
+            </div>
+            <div class="div3">
+                <h3>Luggage, bags and rucksacks
+                </h3>
+            <p class="div3_p">Before entering the exhibition spaces, visitors are required to leave in the cloakroom all luggage, suitcases, rucksacks, packages and containers not considered suitable by staff on account of their size or nature.</p>
+            </div>
+            <div class="div4">
+                <h3>Lost and Found</h3>
+            <p>The visitor is advised to report any loss of personal belongings at the nearest security point, to enable the object to be found.
+                In no event can the Vatican Museums be held responsible for the loss of personal belongings.</p>
+            </div>
+            <div class="div5">
+                <h3>Food and drink</h3>
+            <p class="div5_p">It is forbidden to consume food and drink inside the exhibition halls. Along the museum itinerary several vending machines and refreshment areas with cafeteria, self service and pizzeria services are available to the public.</p>
+         </div>
+            <div class="div6">
+                <h3>Relaxation areas</h3>
+                <p class="div7_p">Relaxation areas with seats are located along the museum itinerary to enable the visitor to take a break and to rest.</p>
+            </div>
+            <div class="div7">
+                <h3>Families at the Vatican Museums</h3>
+            <p class="div7_p">Along the itinerary there are dedicated spaces equipped with baby changing facilities and a nursing room for breastfeeding mothers. Highchairs are provided in some refreshment areas.</p>
+            </div>
+            <div class="div8">
+                <h3>Protection of the artistic patrimony</h3>
+                <p>It is strictly prohibited to touch the works of art throughout the museums</p>
+            </div>
+            </div>
+    </div>
+    <div class="foot">
+        <h2>See you at the museum!</h2>
+    </div>
+    <footer>
+        <div class="linef"></div>
+        <div class="linksContainer">
+            <div class="socm">
+                <div class="iconContainer">
+                    <a href="https://twitter.com/Musei_Vaticani" target="_blank">
+                        <svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_15_227)">
+                                <path d="M24.999 2.3741C24.0253 2.78177 23.0273 3.04556 22.0535 3.16547C23.1733 2.51799 23.9036 1.58273 24.3174 0.383693C23.295 0.959233 22.1996 1.36691 21.0555 1.58273C20.0331 0.527578 18.7916 0 17.3067 0C15.8948 0 14.6777 0.503597 13.6796 1.48681C12.6816 2.47002 12.1704 3.66906 12.1704 5.05995C12.1704 5.44365 12.2191 5.82734 12.2921 6.21103C10.1986 6.11511 8.22686 5.58753 6.40116 4.65228C4.57545 3.71703 3.01751 2.47002 1.72735 0.935252C1.26484 1.72662 1.02141 2.56595 1.02141 3.47722C1.02141 4.34053 1.21615 5.15588 1.62998 5.8753C2.0438 6.6187 2.60369 7.21823 3.28528 7.67386C2.45763 7.64988 1.67866 7.43405 0.972723 7.02638V7.09832C0.972723 8.32134 1.36221 9.3765 2.14118 10.3118C2.92014 11.223 3.89385 11.8225 5.08665 12.0623C4.64848 12.1823 4.18597 12.2302 3.7478 12.2302C3.45568 12.2302 3.13923 12.2062 2.77409 12.1583C3.09054 13.1655 3.69911 14.0048 4.57545 14.6523C5.45179 15.2998 6.44984 15.6355 7.56961 15.6595C5.71956 17.0983 3.5774 17.8177 1.21615 17.8177C0.753638 17.8177 0.339812 17.7938 -0.0253296 17.7458C2.36026 19.2566 4.98928 20 7.83738 20C9.66308 20 11.3671 19.7122 12.9737 19.1607C14.5803 18.5851 15.9435 17.8417 17.0633 16.8825C18.183 15.9233 19.1811 14.8201 19.9844 13.5971C20.8121 12.3501 21.4206 11.0552 21.8101 9.71223C22.1996 8.3693 22.4187 7.0024 22.4187 5.65947C22.4187 5.3717 22.4187 5.15588 22.3943 5.01199C23.4411 4.26858 24.2931 3.40528 24.999 2.3741Z" fill="white"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_15_227">
+                                    <rect width="25" height="20" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+                <div class="iconContainer">
+                    <a href="https://www.facebook.com/p/Vatican-Museums-Musei-Vaticani-100066358103032/" target="_blank">
+                    <svg width="10" height="22" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_15_230)">
+                            <path d="M6.64671 7.21043V5.3054C6.64671 5.01862 6.66667 4.7933 6.68663 4.64991C6.70659 4.48603 6.76647 4.34264 6.86627 4.19925C6.96607 4.05587 7.10579 3.95344 7.30539 3.89199C7.50499 3.83054 7.78443 3.81006 8.12375 3.81006H9.98004V0H7.00599C5.28942 0 4.07186 0.409683 3.33333 1.24953C2.59481 2.08939 2.21557 3.29795 2.21557 4.93669V7.21043H0V11H2.21557V22H6.64671V11H9.6008L10 7.21043H6.64671Z" fill="white"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_15_230">
+                                <rect width="10" height="22" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    </a>
+                </div>
+                <div class="iconContainer">
+                    <a href="https://www.instagram.com/vaticanmuseums/?hl=uk" target="_blank">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_15_233)">
+                            <path d="M15.9305 0H6.06953C2.71746 0 0 2.71746 0 6.06953V15.9305C0 19.2825 2.71746 22 6.06953 22H15.9305C19.2825 22 22 19.2825 22 15.9305V6.06953C22 2.71746 19.2825 0 15.9305 0ZM20.0473 15.9305C20.0473 18.2086 18.1923 20.0473 15.9305 20.0473H6.06953C3.79142 20.0473 1.95266 18.1923 1.95266 15.9305V6.06953C1.95266 3.80769 3.80769 1.95266 6.06953 1.95266H15.9305C18.2086 1.95266 20.0473 3.80769 20.0473 6.06953V15.9305Z" fill="white"/>
+                            <path d="M11 5.3374C7.87572 5.3374 5.32098 7.87586 5.32098 11.0001C5.32098 14.1244 7.85945 16.6791 11 16.6791C14.1242 16.6791 16.679 14.1407 16.679 11.0001C16.679 7.87586 14.1242 5.3374 11 5.3374ZM11 14.7265C8.94968 14.7265 7.27365 13.0667 7.27365 11.0164C7.28992 8.94983 8.94968 7.29007 11 7.29007C13.0503 7.29007 14.7263 8.94983 14.7263 11.0001C14.7263 13.0504 13.0503 14.7265 11 14.7265Z" fill="white"/>
+                            <path d="M16.9068 3.67725C16.5325 3.67725 16.1583 3.8237 15.8979 4.10032C15.6376 4.36068 15.4749 4.73494 15.4749 5.1092C15.4749 5.48346 15.6213 5.85772 15.8979 6.11808C16.1583 6.37843 16.5325 6.54115 16.9068 6.54115C17.2811 6.54115 17.6553 6.3947 17.9157 6.11808C18.176 5.85772 18.3388 5.48346 18.3388 5.1092C18.3388 4.73494 18.1923 4.36068 17.9157 4.10032C17.6553 3.8237 17.2973 3.67725 16.9068 3.67725Z" fill="white"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_15_233">
+                                <rect width="22" height="22" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                        </a>
+                </div>
+                <div class="iconContainer">
+                    <a href="https://www.linkedin.com/company/vatican-museum-guided-tour" target="_blank">
+                    <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_15_222)">
+                            <path d="M5.21579 7.14941H0.275726V22H5.21579V7.14941Z" fill="white"/>
+                            <path d="M21.4376 8.50584C20.4036 7.3794 19.025 6.80469 17.3247 6.80469C16.7043 6.80469 16.1299 6.87365 15.6014 7.03457C15.0959 7.19549 14.6593 7.40239 14.2917 7.67825C13.947 7.95411 13.6483 8.20699 13.4416 8.45986C13.2348 8.68974 13.0509 8.94262 12.8671 9.24147V7.12653H7.95004L7.97302 7.83917C7.97302 8.32193 7.996 9.79319 7.996 12.276C7.996 14.7587 7.996 17.9771 7.97302 21.9771H12.8901V13.7012C12.8901 13.1955 12.9361 12.7817 13.0509 12.4828C13.2577 11.9771 13.5794 11.5403 13.993 11.1955C14.4066 10.8507 14.9351 10.6897 15.5784 10.6897C16.4286 10.6897 17.0719 10.9886 17.4625 11.5863C17.8761 12.184 18.0599 13.0116 18.0599 14.0461V21.9771H22.977V13.4714C23 11.2874 22.4945 9.63227 21.4376 8.50584Z" fill="white"/>
+                            <path d="M2.78022 0C1.95305 0 1.28671 0.252874 0.781219 0.735632C0.252747 1.21839 0 1.81609 0 2.55172C0 3.28736 0.252747 3.88506 0.758242 4.39081C1.26374 4.87356 1.90709 5.12644 2.73427 5.12644H2.75724C3.60739 5.12644 4.27373 4.87356 4.77922 4.39081C5.28472 3.90805 5.53746 3.28736 5.53746 2.55172C5.53746 1.81609 5.26174 1.1954 4.77922 0.712644C4.27373 0.252874 3.60739 0 2.78022 0Z" fill="white"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_15_222">
+                                <rect width="23" height="22" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    </a>
+                </div>
+                <div class="iconContainer">
+                    <a href="https://www.youtube.com/@EWTNcatholictv/featured" target="_blank">
+                    <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_15_219)">
+                            <path d="M27.9856 7.64988C27.9856 7.09832 27.9376 6.3789 27.8417 5.51559C27.7698 4.65228 27.6499 3.88489 27.506 3.21343C27.3381 2.44604 26.9784 1.82254 26.4269 1.29496C25.8753 0.767386 25.2278 0.479616 24.4844 0.383693C22.1823 0.119904 18.6811 0 14.0048 0C9.32854 0 5.82734 0.119904 3.52518 0.383693C2.78177 0.479616 2.13429 0.767386 1.58273 1.29496C1.03118 1.82254 0.671463 2.44604 0.503597 3.21343C0.335731 3.88489 0.239808 4.65228 0.143885 5.51559C0.0719424 6.3789 0.0239808 7.09832 0 7.64988C0 8.22542 0 8.99281 0 10C0 11.0072 0 11.7746 0.0239808 12.3501C0.0239808 12.9017 0.0719424 13.6211 0.167866 14.4844C0.215827 15.3477 0.335731 16.1151 0.479616 16.7866C0.647482 17.554 1.00719 18.1775 1.55875 18.705C2.11031 19.2326 2.75779 19.5204 3.5012 19.6163C5.80336 19.8801 9.30456 20 13.9808 20C18.6571 20 22.1583 19.8801 24.4604 19.6163C25.2038 19.5444 25.8513 19.2326 26.4029 18.705C26.9544 18.1775 27.3141 17.554 27.482 16.7866C27.6499 16.1151 27.7458 15.3477 27.8417 14.4844C27.9137 13.6211 27.9616 12.9017 27.9856 12.3501C27.9856 11.7986 28.0096 11.0072 28.0096 10C28.0096 8.99281 28.0096 8.22542 27.9856 7.64988ZM19.5444 10.8393L11.5348 15.8513C11.3909 15.9472 11.223 16.0192 11.0072 16.0192C10.8393 16.0192 10.6954 15.9712 10.5276 15.8993C10.1918 15.7074 10 15.4197 10 15.012V5.01199C10 4.60432 10.1679 4.31655 10.5276 4.1247C10.8873 3.93285 11.223 3.95683 11.5348 4.14868L15.5396 6.65468L19.5444 9.16067C19.8561 9.32854 20.024 9.61631 20.024 10C20 10.3837 19.8561 10.6715 19.5444 10.8393Z" fill="white"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_15_219">
+                                <rect width="28.0096" height="20" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script src="{% static 'js/visit_page.js' %}"></script>
+</body>
+</html>

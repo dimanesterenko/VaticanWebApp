@@ -16,6 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+
+import Back.views
 from exhibits import views
 from rest_framework import routers
 from django.conf import settings
@@ -30,12 +32,15 @@ urlpatterns = [
     path('', include(router.urls)),
 ]
 urlpatterns = [
+    path('', Back.views.main_page,name='main_page'),
     path('admin/', admin.site.urls),
     path('exibitions/', include(router.urls)),
     path('exhibitsview/', views.exhibit_list_html, name='exhibit_list'),
     path('exhibit_detail/<int:pk>/', views.exhibit_detail, name='exhibit_detail'),
     path('mainbooking/', include('mainbooking.urls')),
     path('souvenirshop/', include('souvenirshop.urls')),
-    path('news/', include('news.urls'))
+    path('news/', include('news.urls')),
+    path('about/',Back.views.about_page),
+    path('visit/',Back.views.visit_page)
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

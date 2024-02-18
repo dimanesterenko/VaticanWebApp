@@ -1,0 +1,167 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
+</head>
+<body>
+
+    <div class="block1">
+        <header>
+            <div class="logo">
+                <img src="{% static 'assets/logo 1.png' %}" alt="">
+            </div>
+            <div class="label_mus">
+                The Vatican Museum
+            </div>
+            <div class="head_but">
+                <div class="ticket"><p>Book tickets</p></div>
+                <div class="store">Store</div>
+            </div>
+
+        </header>
+        <div class="linef">
+            <img src="{% static 'assets/lineBook.png' %}" alt="">
+        </div>
+        <div class="burger-menu">
+            <div class="burger-icon"></div>
+        </div>
+        <nav class="menunav">
+            <ul>
+                <li><a href="#">Visit</a></li>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">What's on</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+        <div class="pictback"></div>
+        <section class="oraganize">
+            <div class="org_lab">
+                <h1>About us</h1>
+                <p>History, main purposes and contacts </p>
+            </div>
+            <nav class="list_menu">
+                <div><a href="#">History</a></div>
+                <div><a href="#">Main Purposes</a></div>
+                <div><a href="#">Contacts</a></div>
+            </nav>
+        </section>
+    </div>
+    <div class="clear"></div>
+    <!-- BLOCK OF HEADER -->
+
+    <div class="block2">
+        <div class="lavel">
+            <h2>History</h2>
+        </div>
+        <section class="cont">
+            <div class="cart first">
+                <h3>Formation</h3>
+                <p>The Vatican Museums trace their origin to a single marble sculpture, purchased in the 16th century: Laocoön and His Sons was discovered on 14 January 1506, in a vineyard near the basilica of Santa Maria Maggiore in Rome.</p>
+                <img src="{% static 'assets/Rectangle32.png' %}" alt="">
+            </div>
+            <div class="cart second">
+                <h3>Art galleries</h3>
+                <p>The Vatican Pinacoteca is a collection of paintings. The collection includes such famous works as “Transfiguration”, “Coronation of Mary” by Raphael; "Saint Jerome" by Leonardo da Vinci.</p>
+                <img src="{% static 'assets/Rectangle31.png' %}" alt="">
+            </div>
+            <div class="cart third">
+                <h3>Treasures Unveiled</h3>
+                <p>We display works from the immense collection amassed by the Catholic Church and the papacy throughout the centuries, including several of the most well-known Roman sculptures and most important masterpieces of Renaissance art in the world.</p>
+                <img src="{% static 'assets/Rectangle30.png' %}" alt="">
+            </div>
+        </section>
+    </div>
+    <div class="clear"></div>
+    <div class="block3">
+        <div class="lavel">
+            <h2>Main Purposes</h2>
+        </div>
+        <div class="parent">
+            <div class="div1">
+            <h3>Preservation of
+                Cultural Heritage</h3>
+            <p>To safeguard and preserve a diverse
+                range of cultural and artistic treasures.</p>
+            </div>
+            <div class="div2">
+                <h3>Cultural Exchange</h3>
+            <p>To facilitate cultural exchange by collaborating with other museums and institutions worldwide.</p>
+            </div>
+            <div class="div3">
+                <h3>Promotion of Art
+                    and Culture</h3>
+            <p>To showcase and promote artistic achievements, particularly emphasizing the Renaissance masterpieces, Roman sculptures.</p>
+            </div>
+            <div class="div4">
+                <h3>Inspiration</h3>
+            <p>To serve as a source of inspiration, allowing
+                visitors to appreciate the beauty, creativity,
+                and diversity of human expression through
+                art.</p>
+            </div>
+            <div class="div5">
+                <h3>Information
+                    Dissemination</h3>
+            <p>To provide accurate and up-to-date information about the collections, exhibitions, events, and activities taking place within the Vatican Museums.</p>
+         </div>
+            <div class="div6">
+                <h3>Visitor Guidance</h3>
+                <p>To offer practical information for visitors, including details on opening hours, ticketing, guided tours, and other visitor services.</p>
+            </div>
+            <div class="div7">
+                <h3>Digital
+                    Publications</h3>
+            <p>To embrace digital technologies to enhance the virtual museum experience, allowing for new ways to engage with the collections online.</p>
+            </div>
+            <div class="div8">
+                <h3>Feedback and
+                    Engagement</h3>
+                <p>To get better by staying in touch.</p>
+            </div>
+            </div>
+    </div>
+    <div class="clear"></div>
+    <div class="block4">
+        <div class="lavel">
+            <h2>Contacts</h2>
+        </div>
+        <section class="info_contacts">
+            <div class="con1">
+                <h3>For general information about the museum, the collection,<br>
+                    our events program and other activities:</h3>
+                <p>E-mail: info.mv@scv.va <br>
+                    Phone: +39 06 69883145</p>
+            </div>
+            <div class="con2">
+                <h3>Office of the Directorate: </h3>
+                <p>E-mail: musei@scv.va <br>
+                    Phone: +39 06 69883332</p>
+            </div>
+        </section>
+        <div class="foot">
+            <h2>See you at the museum!</h2>
+        </div>
+        <footer>
+            <div class="linefot">
+                <img src="{% static 'assets/line.png' %}" alt="">
+            </div>
+            <div class="socm">
+                <img src=" {% static 'assets/social media.png' %}"" alt="">
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+    document.querySelector('.burger-menu').addEventListener('click', function() {
+    this.querySelector('.burger-icon').classList.toggle('active');
+    document.querySelector('.menunav').classList.toggle('active');
+});
+
+    </script>
+</body>
+</html>

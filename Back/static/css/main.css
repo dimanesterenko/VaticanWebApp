@@ -1,0 +1,857 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/*
+789px
+1366px
+*/
+
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+}
+
+p {
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+    align-items: center;
+    flex: 1;
+}
+
+.logo-link {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo {
+    height: auto;
+}
+
+.logo-link:hover {
+    transform: scale(1.1); /* Збільшення на 10% при наведенні */
+}
+
+.logo-link:active {
+    transform: scale(0.9); /* Зменшення на 10% при натисканні */
+}
+
+.label_mus{
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    padding-left: 130px;
+}
+
+.head_but{
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.ticket {
+    width: 161px;
+    height: 65px;
+    background-color: #CB6666;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.ticket a{
+    color: black;
+}
+
+.ticket a:hover {
+    color: white;
+}
+
+.store a:hover {
+    color: #4A4A4A;
+}
+
+
+.ticket p {
+    text-align: center;
+    margin: 0;
+}
+
+.linef{
+    width: 80%;
+    margin-top: 20px;
+    height: 0.5px;
+    background: #C4C4C4;
+}
+
+.menunav{
+    margin-top: 30px;
+}
+
+.menunav a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    position: relative;
+}
+
+.menunav a:hover{
+    color: #4A4A4A;
+}
+
+.menunav a::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.menunav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.menunav>ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    column-gap: 180px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.block1_section_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block1_section {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.contentContainer {
+    margin-top: -30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+.contentContainer__h1 {
+    font-size: 64px;
+    max-width: 620px;
+}
+
+.contentContainer__h2 {
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.block1_section_wrapper_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.tip_wrapper {
+    /*margin-top: -20px;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tip {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.tip_wrapper_block1 {
+    margin-top: -50px;
+}
+
+.tip_p {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.contentContainer__h2_hidden12 {
+    display: none;
+}
+
+.block2_section_wrapper {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.block2_section {
+    margin-left: -50px;
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.block2 {
+    margin-top: 70px;
+}
+
+.block2_p {
+    font-size: 48px;
+    text-align: center;
+}
+
+.block2_textContainer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.block2_textContainer_h1 {
+    font-size: 36px;
+}
+
+.block2_textContainer_h1_hidden12 {
+    display: none;
+}
+
+.block2_textContainer_p {
+    font-size: 20px;
+    line-height: 36px;
+}
+
+
+.block2_textContainer__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    max-width: 470px;
+}
+
+.block2_textContainer_lines {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.tip_wrapper_block2 {
+    margin-top: 135px;
+}
+
+.tip_wrapper_block4 {
+    margin-top: 100px;
+}
+
+
+
+
+
+
+.block3{
+    margin-top: 70px;
+
+    width: 100%;
+    height: 1024px;
+    background-color: #000000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+
+
+.containerflex {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rofw_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 65px;
+}
+
+.rofw {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 100px;
+}
+
+.card3 {
+    width: 270px;
+    height: 270px;
+    background-color: #1A1A3D;
+    /*margin: 10px 15px;*/
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 30px;
+    font-size: 16px;
+    text-align: center;
+    padding: 15px;
+}
+
+.card h3{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+
+
+.text-about-2{
+    font-size: 64px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.two-foot{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.card3_h1 {
+    padding-top: 20px;
+    font-size: 28px;
+    font-weight: 600;
+    padding-bottom: 30px;
+}
+
+.card3_p {
+    font-size: 18px;
+    text-align: justify;
+    line-height: 27px;
+}
+
+
+
+.block3_tip_margin {
+    margin-top: 30px;
+}
+.contact_additional {
+    display: none;
+}
+
+.block4{
+    width: 100%;
+    height: 1024px;
+    background-color: #000000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.cont-trio{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.cont-trio_wrapper {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 28px;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.card-trio{
+    /*margin: 20px;*/
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*.t1 img,.t3 img{
+    max-width: 100%;
+}*/
+
+.t1, .t3 {
+    width:401px ;/*322px*/
+    height: 433px;/*255px*/
+}
+
+/*
+was:
+322px
+255px
+
+for t1
+width:396px ;
+height: 414px;
+
+for t3
+width: 401px;
+  height: 433px;
+*/
+
+.t2 {
+    width: 524px;
+    height: 176px;
+}
+
+
+.bbb{
+    margin-top: 50px;
+}
+
+.card-trio_h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.card-trio_p {
+    font-size: 20px;
+}
+
+.foot{
+    text-align: center;
+    margin-top: 60px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.socm{
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.contact_h1 {
+    font-size: 48px;
+}
+
+.contact_p {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.contact {
+    margin-top: -50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 30px;
+}
+
+
+.tip_p_width {
+    width: 640px;
+}
+
+/*.containerDrid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+"Masterprices Chaple
+"Relics Booking";
+}
+
+.card1Grid {
+    grid-area: Masterprices;
+}
+
+.card2Grid {
+    grid-area: Chaple;
+}
+
+.card3Grid {
+    grid-area: Relics;
+}
+
+.card4Grid {
+    grid-area: Booking;
+}
+
+.card5Grid {
+    grid-area: Events;
+}*/
+
+.hamb {
+    display: none;
+}
+
+.popup {
+    display: none;
+}
+
+
+
+@media (max-width: 1600px) {
+    .block1_section{
+        width: 80%;
+    }
+    .tip_wrapper_block1 {
+        width: 81%;
+    }
+    .tip_block3 {
+        width: 81%;
+    }
+    .block2_section {
+        width: 80%;
+    }
+    .linef {
+        width: 82%;
+    }
+}
+
+
+@media (max-width: 1366px) {
+    .menunav>ul {
+        column-gap: 100px;
+    }
+    header {
+        justify-content: space-around;
+    }
+    .label_mus {
+        padding-left: 100px;
+    }
+    .linef {
+        width: 85%;
+    }
+    .block1_section {
+        flex-direction: column;
+    }
+    .block1_section {
+        margin-top: 100px;
+        row-gap: 40px;
+    }
+    .tip_wrapper_display2 {
+        margin-top: 30px;
+        width: 589px;
+    }
+    .block2_section {
+        flex-direction: column;
+        row-gap: 40px;
+    }
+    .block2_section > div {
+        order: 1;
+    }
+
+    .block2_section > div:first-child {
+        order: 2;
+    }
+    .tip_wrapper_block2 {
+        margin-top: 70px;
+        text-align: center;
+    }
+    .tip_wrapper_block1 {
+        width: 320px;
+    }
+    .card3None {
+        display: none;
+    }
+    .tip_block3_display2 {
+        width: 400px;
+    }
+    .block3_tip_margin {
+        margin-top: 50px;
+    }
+    .cont-trio_wrapper {
+        flex-direction: column;
+        row-gap: 40px;
+    }
+    .t2 {
+        display: none;
+    }
+    .cont-trio {
+        margin-top: 50px;
+    }
+    .tip_wrapper_block4 {
+        margin-top: 100px;
+    }
+    .contact {
+        margin-top: 130px;
+    }
+}
+
+@media (max-width: 789px) {
+    .label_mus {
+        padding: 0;
+    }
+    header {
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 20px;
+    }
+    .header {
+        row-gap: 20px;
+    }
+    .linef {
+        display: none;
+    }
+    .menu .menunav{
+        display: none;
+    }
+    .hamb {
+        display: flex;
+        align-items: center;
+    }
+    .hamb_field {
+        cursor: pointer;
+    }
+    .hamb_field.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamb_field.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamb_field.active .bar:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
+    .bar {
+        width: 35px;
+        height: 3px;
+        margin: 6px auto;
+        display: block;
+        background-color: white;
+        transition: 0.2s;
+    }
+    .popup {
+        width: 100%;
+        height: 110%;
+        position: fixed;
+        top: 310px;
+        left: -100%;
+        display: flex;
+        padding-top: 50px;
+        z-index: 100;
+       /*backdrop-filter: blur(8px);*/
+        background-color: black;
+        transition: 0.3s;
+    }
+    .popup.open {
+        left: 0;
+    }
+    .popup .menunav {
+        width: 100%;
+        height: 110%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        /*padding-top: 50px;*/
+        overflow: auto;
+    }
+    .popup .menunav > ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        row-gap: 50px;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+    body.noscroll {
+        overflow: hidden;
+    }
+    .contentContainer__h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+    .contentContainer__h2 {
+        font-size: 14px;
+        text-align: center;
+        line-height: 21px;
+    }
+    .imageContainer {
+        display: none;
+    }
+    .tip_p {
+        font-size: 14px;
+    }
+    .ticket_hidden {
+        display: none;
+    }
+    .tip_wrapper_display2{
+        margin-top: 80px;
+    }
+    .contentContainer__h2_hidden12 {
+        display: initial;
+    }
+    .contentContainer__h2_hidden {
+        display: none
+    }
+    .block1_section {
+        background-image: url("../assets/музей Ватикану.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 75px;
+    }
+    .block1_section {
+        margin-top: 30px;
+    }
+    .label_mus {
+        font-size: 24px;
+    }
+    .head_but {
+        font-size: 16px;
+    }
+    .contentContainer {
+        margin-top: 0;
+    }
+    .block2_p {
+        font-size: 24px;
+    }
+    .block2_textContainer_h1 {
+        font-size: 18px
+    }
+    .block2_textContainer_p {
+        font-size: 16px;
+    }
+    .block2_image {
+        display: none;
+    }
+    .block2_section_wrapper {
+        margin-top: 35px;
+    }
+    .block2_textContainer_h1_hidden12 {
+        display: initial;
+    }
+    .block2_textContainer_h1_hidden {
+        display: none;
+    }
+    .block2_textContainer {
+        row-gap: 30px;
+    }
+    .tip_wrapper_block1 {
+        width: 237px;
+    }
+    .card3None {
+        display: initial;
+    }
+    .card4None {
+        display: none;
+    }
+    .rofw {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+    .containerflex {
+        margin-top: 30px;
+    }
+    .card3_h1 {
+        font-size: 20px;
+    }
+    .card3_p {
+        font-size: 16px;
+    }
+    .card3 {
+        width: 250px;
+        height: 250px;
+    }
+    .block3_tip_margin {
+        margin-top: -40px;
+    }
+    .block4 {
+        margin-top: 50px;
+    }
+    .tip_wrapper_block4 {
+        margin-top: 65px;
+    }
+    .contact_h1 {
+        font-size: 24px;
+    }
+    .contact_additional {
+        display: initial;
+        font-size: 18px;
+        text-align: justify;
+        width: 80%;
+    }
+    .contact_p {
+        margin-top: -18px;
+        font-size: 18px;
+    }
+    .tip_p_width_contact {
+        width: 400px;
+    }
+    .contact {
+        margin-top: 100px;
+    }
+    .card-trio_p {
+        width: 300px;
+    }
+    .card-trio {
+        padding: 0;
+    }
+    .tip_block3_display2 {
+        width: 276px;
+    }
+    .cont-trio_wrapper {
+        margin-left: 0;
+    }
+
+}
