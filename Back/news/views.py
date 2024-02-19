@@ -13,3 +13,7 @@ class NewsView(viewsets.ModelViewSet):
 def news_list(request):
     news = News.objects.all()
     return render(request, 'news.html', {'news': news})
+
+def news_detai(request, pk):
+    new = get_object_or_404(News, pk=pk)
+    return render(request, 'news_detail.html', {'new': new})

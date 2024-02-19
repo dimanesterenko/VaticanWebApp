@@ -7,5 +7,7 @@ router.register(r'restnews', NewsView)
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('newslist/',views.news_list, name='news')
+    path('newslist/',views.news_list, name='news'),
+    path('newslist/news_detail/<int:pk>/', views.news_detai, name='news_detail')
+
 ]

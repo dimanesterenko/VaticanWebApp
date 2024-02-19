@@ -3,13 +3,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>News</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ new.news_title }}</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/visit_page.css' %}">
-
+    <link rel="stylesheet" type="text/css" href="{% static 'css/news_detail.css' %}">
 </head>
 <body>
-<div class="block1">
-      <div class="header">
+    <div class="block1">
+        <div class="header">
             <header>
                 <a href="{% url 'main_page' %}" class="logo-link">
                     <div class="logo">
@@ -51,24 +52,40 @@
             </div>
             <div class="popup" id="popup"></div>
         </div>
+{#        <div class="pictback"></div>#}
+{#        <section class="oraganize">#}
+{#            <div class="org_lab">#}
+{#                <h1>Organize your visit</h1>#}
+{#                <p>Hours and address, ticket prices, rules and useful advice </p>#}
+{#            </div>#}
+{#            <nav class="list_menu" id="list_menu">#}
+{#                <div><a href="#hours">Hours & Address</a></div>#}
+{#                <div><a href="#ticket_price">Ticket Prices</a></div>#}
+{#                <div><a href="#rules">Rules & Useful Advice</a></div>#}
+{#            </nav>#}
+{#        </section>#}
+{#    </div>#}
+    <div class="clear clear1"></div>
+
+    <div class="new_box">
+            <div class="pict">
+        {% if new.news_image %}
+                    <img src="{{ new.news_image.url }}" alt="{{ new.news_title }}">
+        {% endif %}
+    </div>
+    <div class="descrip">
+    <p class="new_label">{{ new.news_title }}</p>
+    <div class="date_category">
+    <p>{{ new.news_date }}</p>
+    <p>{{ new.news_category }}</p>
+        </div>
+            <p class="news_d">{{ new.news_description }}</p>
+    </div>
+        </div>
+
     <div class="clear"></div>
 
-    <h1>Latest News Articles</h1>
-    {% for new in news %}
-        <div class="news-article">
-            <h2>{{ new.news_title }}</h2>
-            <p><strong>Date:</strong> {{ new.news_date }}</p>
-            <a href="news_detail/{{ new.id }}">
-            <img src="{{ new.news_image.url }}" alt="{{ new.news_title }}">
-                </a>
-            <p>{{ new.news_description|truncatechars:100 }}</p>
-            <hr>
-        </div>
-    {% empty %}
-        <p>No news articles available.</p>
-    {% endfor %}
-<!-- Footer -->
-   <div class="foot">
+    <div class="foot">
         <h2>See you at the museum!</h2>
     </div>
     <footer>

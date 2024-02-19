@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
 .my-form {
     width: 300px;
     margin: 0 auto;
@@ -27,13 +35,7 @@
     background-color: #0056b3;
 }
 
-body{
-    background-color: black;
-    margin: 0;
-    padding: 0;
-    color: white;
-    font-family: 'Lato', sans-serif;
-}
+
 
 h1 {
     font-weight: 500;
@@ -49,9 +51,10 @@ header{
 }
 
 .label_mus{
-    font-size: 36px;
     text-align: center;
     padding-left: 130px;
+    font-size: 32px;
+    font-weight: 600;
 }
 
 .head_but{

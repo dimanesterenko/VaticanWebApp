@@ -469,17 +469,18 @@ width: 401px;
     margin-top: 60px;
 }
 
-
-.socm{
-    padding-top: 30px;
-    padding-bottom: 20px;
-     width: 90%;
+footer{
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    column-gap: 30px;
+    flex-direction: column;
+    gap: 20px;
+}
+.socm{
+    display: flex;
     gap: 30px;
+    padding-top: 30px;
+    padding-bottom: 20px;
 }
 
 .contact_h1 {
@@ -855,31 +856,4 @@ width: 401px;
         margin-left: 0;
     }
 
-}
-
-
-.linksContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.socm{
-
-}
-
-.iconContainer {
-    display: inline-block;
-    position: relative;
-}
-
-.iconContainer a:hover svg {
-    transform: scale(1.2);
-    transition: transform 0.5s ease;
-}
-
-.footerflex{
-display: flex;
-    flex-direction: row;
-    gap: 30px;
 }
