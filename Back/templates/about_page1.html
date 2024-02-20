@@ -1,70 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About museum</title>
+</head>
+<body>
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Exhibits</title>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/visit_page.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'css/footer.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}">
-
-    <style>
-        .exhibits{
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            align-items: center;
-            justify-content: space-around;
-        }
-        .exhibit-card {
-            border-radius: 5px;
-            padding: 10px;
-            margin-bottom: 10px;
-            max-width: 300px;
-            text-align: center;
-        }
-        .exhibit-image {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 10px;
-        }
-
-/*MEDIA QUERIES*/
-@media only screen and (max-width: 600px) {
-    header {
-        flex-direction: column;
-    }
-    .label_mus {
-        padding-left: 0;
-    }
-    .head_but {
-        flex-direction: column;
-    }
-    .ticket {
-        width: 100px;
-        height: 35px;
-    }
-    .menunav {
-        margin-top: 10px;
-    }
-    .menunav a {
-        font-size: 14px;
-    }
-    .menunav > ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .linefot, .linef{
-        display: none;
-    }
-}
-    </style>
+    <title>News</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/news_style.css' %}">
 </head>
 <body>
- <div class="block1">
-        <div class="header">
+<div class="block1">
+      <div class="header">
             <header>
                 <a href="{% url 'main_page' %}" class="logo-link">
                     <div class="logo">
@@ -106,27 +58,111 @@
             </div>
             <div class="popup" id="popup"></div>
         </div>
- </div>
+</div>
     <div class="clear"></div>
-    <div class="block2">
-    <div class="exhibits">
-        {% for exhibit in exhibits %}
-            <div class="exhibit-card">
-                <h2>{{ exhibit.title }}</h2>
-                <a href="/exhibit_detail/{{ exhibit.exhibit_code }}">
-                    <img src="{{ exhibit.photo.url }}" alt="{{ exhibit.title }}" class="exhibit-image">
-                </a>
-                <p><strong>Author:</strong> {{ exhibit.creator_name }}</p>
+
+<div class="block2">
+        <div class="lavel">
+            <h2>History</h2>
+        </div>
+        <section class="cont">
+            <div class="cart first">
+                <h3>Formation</h3>
+                <p>The Vatican Museums trace their origin to a single marble sculpture, purchased in the 16th century: Laocoön and His Sons was discovered on 14 January 1506, in a vineyard near the basilica of Santa Maria Maggiore in Rome.</p>
+                <img src="{% static 'assets/Rectangle32.png' %}" alt="">
             </div>
-        {% endfor %}
+            <div class="cart second">
+                <h3>Art galleries</h3>
+                <p>The Vatican Pinacoteca is a collection of paintings. The collection includes such famous works as “Transfiguration”, “Coronation of Mary” by Raphael; "Saint Jerome" by Leonardo da Vinci.</p>
+                <img src="{% static 'assets/Rectangle31.png' %}" alt="">
+            </div>
+            <div class="cart third">
+                <h3>Treasures Unveiled</h3>
+                <p>We display works from the immense collection amassed by the Catholic Church and the papacy throughout the centuries, including several of the most well-known Roman sculptures and most important masterpieces of Renaissance art in the world.</p>
+                <img src="{% static 'assets/Rectangle30.png' %}" alt="">
+            </div>
+        </section>
     </div>
+    <div class="clear"></div>
+    <div class="block3">
+        <div class="lavel">
+            <h2>Main Purposes</h2>
+        </div>
+        <div class="parent">
+            <div class="div1">
+            <h3>Preservation of
+                Cultural Heritage</h3>
+            <p>To safeguard and preserve a diverse
+                range of cultural and artistic treasures.</p>
+            </div>
+            <div class="div2">
+                <h3>Cultural Exchange</h3>
+            <p>To facilitate cultural exchange by collaborating with other museums and institutions worldwide.</p>
+            </div>
+            <div class="div3">
+                <h3>Promotion of Art
+                    and Culture</h3>
+            <p>To showcase and promote artistic achievements, particularly emphasizing the Renaissance masterpieces, Roman sculptures.</p>
+            </div>
+            <div class="div4">
+                <h3>Inspiration</h3>
+            <p>To serve as a source of inspiration, allowing
+                visitors to appreciate the beauty, creativity,
+                and diversity of human expression through
+                art.</p>
+            </div>
+            <div class="div5">
+                <h3>Information
+                    Dissemination</h3>
+            <p>To provide accurate and up-to-date information about the collections, exhibitions, events, and activities taking place within the Vatican Museums.</p>
+         </div>
+            <div class="div6">
+                <h3>Visitor Guidance</h3>
+                <p>To offer practical information for visitors, including details on opening hours, ticketing, guided tours, and other visitor services.</p>
+            </div>
+            <div class="div7">
+                <h3>Digital
+                    Publications</h3>
+            <p>To embrace digital technologies to enhance the virtual museum experience, allowing for new ways to engage with the collections online.</p>
+            </div>
+            <div class="div8">
+                <h3>Feedback and
+                    Engagement</h3>
+                <p>To get better by staying in touch.</p>
+            </div>
+            </div>
+    </div>
+    <div class="clear"></div>
+    <div class="block4">
+        <div class="lavel">
+            <h2>Contacts</h2>
+        </div>
+        <section class="info_contacts">
+            <div class="con1">
+                <h3>For general information about the museum, the collection,<br>
+                    our events program and other activities:</h3>
+                <p>E-mail: info.mv@scv.va <br>
+                    Phone: +39 06 69883145</p>
+            </div>
+            <div class="con2">
+                <h3>Office of the Directorate: </h3>
+                <p>E-mail: musei@scv.va <br>
+                    Phone: +39 06 69883332</p>
+            </div>
+        </section>
+
     </div>
 
+    <div class="clear"></div>
+
 <!-- Footer -->
+
     <footer>
         <div>
+            <p>If you have any questions, please contact us using this link</p>
             <p>See you at the museum!</p>
         </div>
+
         <div class="linef"></div>
         <div class="linksContainer">
             <div class="socm">
@@ -208,22 +244,9 @@
         </div>
 
     </footer>
+<script src="{% static 'js/visit_page.js' %}"></script>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-<script>
-    $(document).ready(function(){
-        $('.exhibits').slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 2000,
-            arrows: true,
-            prevArrow: '<button type="button" class="slick-prev">Previous</button>',
-            nextArrow: '<button type="button" class="slick-next">Next</button>',
-        });
-    });
-</script>
 </body>
 </html>
-
+</body>
+</html>

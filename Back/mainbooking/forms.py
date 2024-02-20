@@ -38,8 +38,6 @@ class TicketForm(forms.ModelForm):
     Ticket_Time = forms.TimeField(widget=LimitedTimeWidget)
 
 
-
-
     def save(self, commit=True):
         ticket = super().save(commit=False)
         ticket.calculate_price()

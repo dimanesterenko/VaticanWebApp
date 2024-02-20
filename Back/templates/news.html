@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>News</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/visit_page.css' %}">
-
+    <link rel="stylesheet" type="text/css" href="{% static 'css/news_style.css' %}">
 </head>
 <body>
 <div class="block1">
@@ -52,26 +52,40 @@
             <div class="popup" id="popup"></div>
         </div>
     <div class="clear"></div>
+    <div class="text_news">
+        <p>“Dive into the exciting updates from the Vatican Museums' world – a treasure trove of news that will spark your curiosity and make your day brighter!”</p>
+    </div>
+    <div class="clear"></div>
 
-    <h1>Latest News Articles</h1>
-    {% for new in news %}
+    <div class="news_box">
+        {% for new in news %}
         <div class="news-article">
-            <h2>{{ new.news_title }}</h2>
-            <p><strong>Date:</strong> {{ new.news_date }}</p>
-            <a href="news_detail/{{ new.id }}">
+            <div>
+               <a href="news_detail/{{ new.id }}">
             <img src="{{ new.news_image.url }}" alt="{{ new.news_title }}">
                 </a>
-            <p>{{ new.news_description|truncatechars:100 }}</p>
-            <hr>
+            </div>
+            <div>
+                <h2>{{ new.news_title }}</h2>
+                <p>{{ new.news_date }}</p>
+                <a href="news_detail/{{ new.id }}">Click on it for more</a>
+            </div>
+
         </div>
     {% empty %}
         <p>No news articles available.</p>
     {% endfor %}
-<!-- Footer -->
-   <div class="foot">
-        <h2>See you at the museum!</h2>
     </div>
+    <div class="clear"></div>
+
+<!-- Footer -->
+
     <footer>
+        <div>
+            <p>If you have any questions, please contact us using this link</p>
+            <p>See you at the museum!</p>
+        </div>
+
         <div class="linef"></div>
         <div class="linksContainer">
             <div class="socm">

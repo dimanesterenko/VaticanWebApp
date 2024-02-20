@@ -49,9 +49,11 @@ class Ticket(models.Model):
 
     def calculate_price(self):
         if self.Ticket_Type == 'adult':
-            self.Ticket_Price = 40 * self.Ticket_Count
+            self.Ticket_Price = 62 * self.Ticket_Count
         elif self.Ticket_Type == 'child':
-            self.Ticket_Price = 20 * self.Ticket_Count
+            self.Ticket_Price = 52 * self.Ticket_Count
+        elif self.Ticket_Type == 'baby':
+            self.Ticket_Price = 5 * self.Ticket_Count
         super().save()
     def __str__(self):
         return f'Ticket-{self.Ticket_ID} for {self.Visitor_ID.Visitor_Name}'

@@ -12,7 +12,7 @@ body{
 .linef{
     width: 80%;
     margin-top: 20px;
-    height: 0.5px;
+    height: 0.2px;
     background: #C4C4C4;
 }
 header{
@@ -54,14 +54,17 @@ header{
     margin: 0;
 }
 
-.linef{
-    padding-top: 30px;
-    min-width: 1219px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/*.linef{*/
+/*    !*padding-top: 30px;*!*/
+/*    min-width: 1219px;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
+a{
+    text-decoration: none;
+    color: white;
 }
-
 .menunav{
     margin-top: 30px;
 }

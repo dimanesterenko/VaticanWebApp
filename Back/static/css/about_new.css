@@ -76,11 +76,10 @@ header{
 }
 
 
-
 .pictback{
     width: 100%;
     height: 479px;
-    background-image: url("../assets/visitpicture.png");
+    background-image: url("../assets/aboutphoto.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -255,7 +254,7 @@ header{
 
 .block4{
     width: 100%;
-    max-height: 1024px;
+    height: auto;
 }
 
 .lavel {
@@ -487,7 +486,7 @@ ul {
 
 @media (max-width: 789px) {
     .org_lab {
-        background-image: url("../assets/background of the museum.png");
+        background-image: url("../assets/aboutphoto.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -1418,7 +1417,7 @@ footer{
         display: none
     }
     .block1_section {
-        background-image: url("../assets/музей Ватикану.png");
+        background-image: url("../assets/aboutphoto.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -1527,4 +1526,13 @@ footer{
         margin-left: 0;
     }
 
+}
+
+.pictback2{
+    background-image: url("../assets/aboutphoto.png");
+    width: 100%;
+    height: 479px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }

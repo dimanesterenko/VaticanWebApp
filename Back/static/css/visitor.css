@@ -99,12 +99,18 @@ a {
     margin: 0;
 }
 
+/*.linef{*/
+/*    padding-top: 30px;*/
+/*    min-width: 1219px;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
 .linef{
-    padding-top: 30px;
-    min-width: 1219px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 80%;
+    margin-top: 20px;
+    height: 0.2px;
+    background: #C4C4C4;
 }
 
 .menunav{

@@ -237,15 +237,15 @@
     </div>
     </form>
 
-    <div class="label__buttons">
-        <div class="button"><p class="button__p">Reset</p></div>
-        <div class="label__buttons__cost">
-            <p class="label__buttons__cost__p">Total: €</p>
-            <div></div>
-            <div class="button button-white"><p class="button__p button__p-black">Proceed</p></div>
-        </div>
-
-    </div>
+{#    <div class="label__buttons">#}
+{#        <div class="button"><p class="button__p">Reset</p></div>#}
+{#        <div class="label__buttons__cost">#}
+{#            <p class="label__buttons__cost__p">Total: €</p>#}
+{#            <div></div>#}
+{#            <div class="button button-white"><p class="button__p button__p-black">Proceed</p></div>#}
+{#        </div>#}
+{##}
+{#    </div>#}
     <h1 class="label__h1">Provide your details</h1>
     <form class="form my-form" method="post">
         {% csrf_token %}
@@ -367,7 +367,7 @@
 
 
 </script>
-<script src="{% static 'js/visit_page.js' %}"></script>
+<script src="{% static 'js/menu.js' %}"></script>
 
 </body>
 </html>
