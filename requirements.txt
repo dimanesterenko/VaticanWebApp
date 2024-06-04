@@ -1,0 +1,29 @@
+# Core Django package
+Django>=4.0,<5.0
+
+# Database support (for PostgreSQL, as an example)
+psycopg2-binary>=2.9.3
+
+# Gunicorn for WSGI HTTP Server (for deployment)
+gunicorn>=20.1.0
+
+# Additional dependencies for Django REST framework
+djangorestframework>=3.13.1
+Markdown>=3.3.4  # If you use Markdown in your project
+django-filter>=22.1  # For filtering REST API requests
+
+# For managing environment variables
+python-decouple>=3.6
+
+# For handling CORS (if your API will be accessed from different origins)
+django-cors-headers>=3.11.0
+
+# Celery for asynchronous task queues (if needed)
+celery>=5.2.3
+
+# Redis as a message broker for Celery (if using Redis)
+redis>=4.1.0
+
+# Pillow for image processing
+Pillow>=9.0.1
+
