@@ -90,9 +90,9 @@ WSGI_APPLICATION = 'Back.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'VaticanMuseumDB',
-        'USER': 'dima',
-        'PASSWORD': '21022004',
+        'NAME': 'VaticanMuseumDB', 
+        'USER': 'user', # your username
+        'PASSWORD': '********', #your password
     }
 }
 
